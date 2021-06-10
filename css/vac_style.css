@@ -1,0 +1,42 @@
+
+* {
+    margin:0px;
+    padding:0px;
+}
+
+/*Cabecera de la página*/
+#all_cabeza{
+    position: sticky;
+    top: 0;
+}
+#raya_alta_cabeza{
+    background-color: #9E7E4F;
+    width: 100%;
+    height: 5px;
+}
+
+#centro_cabeza{
+    width: 100%;
+    height: 200px;
+    background-image: url(../images/top_left.png), url(../images/top_right.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left, right;
+    background-color: #FCFAF7;
+}
+#imgDiv{
+    background: url(../images/gmx.png) no-repeat center center;
+    height: 100%;
+    width: 100%;
+}
+
+#pie_cabeza{
+    background-color: #BC955C;
+    width: 100%;
+    height: 30px;
+}
+
+#raya_baja_cabeza{
+    background-color: #9E7E4F;
+    width: 100%;
+    height: 5px;
+}
