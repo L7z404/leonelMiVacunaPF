@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="add552e9-20d4-4048-9bed-6da15a5d712f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/mivacactual.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tecweb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +53,7 @@
       <workItem from="1623203697124" duration="268000" />
       <workItem from="1623204511361" duration="1738000" />
       <workItem from="1623289033920" duration="451000" />
-      <workItem from="1623289714806" duration="884000" />
+      <workItem from="1623289714806" duration="1237000" />
     </task>
     <servers />
   </component>
