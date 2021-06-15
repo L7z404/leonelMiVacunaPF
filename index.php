@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/vac_style.css" type="text/css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Mi Vacuna</title>
 </head>
 <body>
@@ -22,15 +23,34 @@
     <br>
     <br>
     <br>
-
+    <form>
+    <fieldset id="fsCURP">
     <div id="container_dato_curp">
         <div id="info_a_curp">
-
+            <br />
+            <p>&ensp;Estoy dentro del rango de edad especificado y me quiero vacunar:&ensp;</p>
+            <br />
         </div>
+        <br />
+        <br />
         <div id="curp">
-
+            <img alt="UserIcon" src="images/user.png">
+            <label>
+                <input type="text" placeholder="Introducir CURP" name="vCURP">
+            </label>
         </div>
-    </div>
+        <br />
+        <br />
+        <div id="curp_capcha_button">
+            <div id="captcha" class="g-recaptcha" data-sitekey="6LfNdjMbAAAAANzlt9qOKiIEqAWsDqhydrtUjDqg"></div>
+            <button id="bconfcurp" type="button">Confirmar CURP</button>
+        </div>
 
+
+
+
+    </div>
+    </fieldset>
+    </form>
 </body>
 </html>
