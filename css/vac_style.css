@@ -69,16 +69,16 @@ button {
 
 /* Cosas del centro */
 
-#fsCURP{
-    width: fit-content !important;
-    margin: auto;
+#centerform{
+    /*background-color: black;*/
     text-align: center;
-    border-color: blanchedalmond;
-    border-width: thick;
-    /*display: inline-block;*/
 }
 
 #container_dato_curp{
+    width: fit-content !important;
+    margin: auto;
+    text-align: center;
+    border: 5px solid blanchedalmond;
     display: inline-block;
     justify-content: center;
 }

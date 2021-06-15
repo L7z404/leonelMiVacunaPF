@@ -23,8 +23,8 @@
     <br>
     <br>
     <br>
-    <form>
-    <fieldset id="fsCURP">
+    <form id="centerform">
+
     <div id="container_dato_curp">
         <div id="info_a_curp">
             <br />
@@ -50,7 +50,7 @@
 
 
     </div>
-    </fieldset>
+
     </form>
 </body>
 </html>
