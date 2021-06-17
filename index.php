@@ -8,21 +8,20 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="css/vac_style.css" type="text/css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="javascript/validaciones.js"></script>
     <title>Mi Vacuna</title>
 </head>
 <body>
     <div id="all_cabeza">
         <div id="raya_alta_cabeza"></div>
         <div id="centro_cabeza">
-            <div id="imgDiv">
-
-            </div>
+            <div id="imgDiv"></div>
         </div>
         <div id="pie_cabeza"></div>
         <div id="raya_baja_cabeza"></div>
     </div>
     <br><br><br>
-    <form id="centerform">
+    <form id="centerform" name="curpForm">
 
     <div id="container_dato_curp">
         <div id="info_a_curp">
@@ -34,15 +33,18 @@
         <br />
         <div id="curp">
             <img alt="UserIcon" src="images/user.png">
+
             <label>
-                <input type="text" placeholder="Introducir CURP" name="vCURP">
+                <input type="text" id="curp_input" oninput="validarInput(this)" placeholder="Ingrese su CURP">
             </label>
+            <pre id="resultado"></pre>
+
         </div>
         <br />
         <br />
         <div id="curp_capcha_button">
             <div id="captcha" class="g-recaptcha" data-sitekey="6LfNdjMbAAAAANzlt9qOKiIEqAWsDqhydrtUjDqg"></div>
-            <button id="bconfcurp" type="button">Confirmar CURP</button>
+            <button id="bconfcurp" type="button" onclick="return curpValidaSubmit();">Confirmar CURP</button>
         </div>
 
 
