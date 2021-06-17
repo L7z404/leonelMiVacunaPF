@@ -20,9 +20,7 @@
         <div id="pie_cabeza"></div>
         <div id="raya_baja_cabeza"></div>
     </div>
-    <br>
-    <br>
-    <br>
+    <br><br><br>
     <form id="centerform">
 
     <div id="container_dato_curp">
@@ -52,5 +50,20 @@
     </div>
 
     </form>
+    <br><br><br>
+    <div id="botones_abajo_index">
+        <button id="bregmivac" type="button">Guía Para Registrarse en mivacuna</button>
+        &ensp;&ensp;
+        <button id="bnoconoce" type="button">¿No conoces tu CURP...? Consúltala aquí</button>
+        &ensp;&ensp;
+        <button id="baviso" type="button">Aviso de Privacidad</button>
+        &ensp;&ensp;
+        <button id="infodosis" type="button">Información segunda dosis</button>
+
+    </div>
+    <br><br><br>
+    <footer>
+
+    </footer>
 </body>
 </html>

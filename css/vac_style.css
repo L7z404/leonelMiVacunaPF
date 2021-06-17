@@ -18,16 +18,16 @@ input {
 }
 
 button {
-    width: 150px;
+    /*width: 150px;*/
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background: #9F2141;
+    /*background: #9F2141;*/
     font-size: 16px;
-    color: #fff;
+    /*color: #fff;*/
     cursor: pointer;
 }button:hover {
-     background: #711D33;
+     /*background: #711D33;*/
  }
 
 /*Cabecera de la página*/
@@ -82,10 +82,14 @@ button {
     display: inline-block;
     justify-content: center;
 }
-
 #bconfcurp{
+    width: 150px;
     float: right;
-}
+    background: #9F2141;
+    color: #fff;
+}#bconfcurp:hover{
+     background: #711D33;
+ }
 #captcha{
     float: left;
 }
@@ -96,3 +100,42 @@ button {
     width: 100%;
     color: dimgrey;
 }
+
+/*Botones index*/
+#botones_abajo_index{
+    /*display: flex;*/
+    text-align: center;
+    /*background-color: red;*/
+}
+#bregmivac{
+    width: 220px;
+    background: #17A2B7;
+    color: #FFF;
+}#bregmivac:hover{
+     background: #058094;
+ }
+
+#bnoconoce{
+    width: 220px;
+    background: #27A744FF;
+    color: #FFF;
+}#bnoconoce:hover{
+     background: #068d24;
+ }
+
+#baviso{
+    width: 200px;
+    background: #979799;
+    color: #FFF;
+}#baviso:hover{
+     background: #78787a;
+ }
+
+#infodosis{
+    width: 200px;
+    background: #235a4e;
+    color: #FFF;
+}#infodosis:hover{
+     background: #033027;
+ }
+
