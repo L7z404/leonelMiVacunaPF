@@ -32,7 +32,8 @@ button {
 
 /*Cabecera de la página*/
 #all_cabeza{
-    position: sticky;
+    /*No se si dejar o quitar el sticky*/
+    /*position: sticky;*/
     top: 0;
 }
 #raya_alta_cabeza{
@@ -139,3 +140,15 @@ button {
      background: #033027;
  }
 
+
+ /*todo lo de abajo footer*/
+#raya_baja_footer{
+    background-color: #17a1b7;
+    width: 100%;
+    height: 25px;
+}
+#raya_baja_ultima_footer{
+    background-color: #bb945c;
+    width: 100%;
+    height: 60px;
+}

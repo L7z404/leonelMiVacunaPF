@@ -63,7 +63,14 @@
     </div>
     <br><br><br>
     <footer>
-
+        <div id="raya_baja_footer">
+            <p style="color: #fff; text-align: center; font-family: 'Comic Sans MS',serif">El horario de operación es continuo de lunes a domingo.</p>
+        </div>
+        <br>
+        <div id="texto_abajo_footer">
+            <p style="text-align: center; color: grey; font-family: 'Comic Sans MS',serif; font-size: 14px">La aplicación de la Política Nacional de Vacunación es de carácter público, ajena a cualquier partido político. Queda prohibido su uso para fines distintos a los establecidos.</p>
+        </div>
+        <div id="raya_baja_ultima_footer"></div>
     </footer>
 </body>
 </html>
