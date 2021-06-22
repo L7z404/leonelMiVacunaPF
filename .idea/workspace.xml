@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="add552e9-20d4-4048-9bed-6da15a5d712f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/javascript/validaciones.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/vac_style2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/confCurp.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -55,7 +55,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/cmder/cmder.bat" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -80,6 +81,10 @@
       <workItem from="1623291964144" duration="4818000" />
       <workItem from="1623717090561" duration="7078000" />
       <workItem from="1623891077913" duration="4094000" />
+      <workItem from="1624287555335" duration="145000" />
+      <workItem from="1624397056267" duration="59000" />
+      <workItem from="1624397151020" duration="57000" />
+      <workItem from="1624397223203" duration="1335000" />
     </task>
     <servers />
   </component>

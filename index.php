@@ -21,7 +21,7 @@
         <div id="raya_baja_cabeza"></div>
     </div>
     <br><br><br>
-    <form id="centerform" name="curpForm">
+    <form action="pages/confCurp.php" id="centerform" name="curpForm">
 
     <div id="container_dato_curp">
         <div id="info_a_curp">
