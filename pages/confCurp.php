@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../css/vac_style.css" type="text/css">
     <link rel="stylesheet" href="../css/vac_style2.css" type="text/css">
-    <title>Mi Vacuna - Confirmación Curp</title>
+    <title>Mi Vacuna - Confirmación CURP</title>
 </head>
 <body>
     <div id="all_cabeza">
