@@ -22,7 +22,7 @@
     <div id="raya_baja_cabeza"></div>
 </div>
     <br><br><br>
-    <div id="botones_abajo_index">
+    <div id="botones_abajo_index" >
         <button id="bregmivac" type="button"><a style="text-decoration: none; color: #fff" href="https://mivacuna.salud.gob.mx/pdf/registro_vacuna_imgns_c6.pdf" target="_blank">Guía Para Registrarse en mivacuna</a></button>
         &ensp;&ensp;
         <button id="bnoconoce" type="button"><a style="text-decoration: none; color: #fff" href="https://www.gob.mx/curp/" target="_blank">¿No conoces tu CURP...? Consúltala aquí</a></button>
@@ -33,8 +33,15 @@
 
     </div>
     <br><br><br>
-    <div id="configCurp">
+    <form id="confCenterForm" name="confCurpForm">
+        <div id="configCurp">
+            <div id="datosConfigCurp">asdfasdfasdfasdfasdfadsfasdfasdfads</div>
+            <div id="textoConfigCurp" >
+                <p>Se garantiza la protección de los datos personales en cumplimiento con la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados. Los datos personales y sensibles serán utilizados y vinculados para verificación y confirmación de la identidad dentro del marco de la planeación, implementación y aplicación de la Política Nacional de Vacunación y demás políticas sociales, así como para integrar expedientes y bases de datos necesarias para, en su caso, el otorgamiento y operación de políticas sociales del Gobierno Federal, así como las obligaciones que se deriven de estos y para mantener una base histórica con fines estadísticos y de obligaciones relativas a la transparencia, en términos de la normatividad y disposiciones aplicables. Consulte el aviso integral de privacidad en https://mivacuna.salud.gob.mx Lo anterior se informa en cumplimiento a los artículos 26, 27 y 28 de la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados. La Política Nacional de Vacunación es de carácter público, ajeno a cualquier partido político. Queda prohibido su uso para fines distintos a los establecidos.</p>
+            </div>
+            <div id="botonesConfigCurp"></div>
+        </div>
+    </form>
 
-    </div>
 </body>
 </html>

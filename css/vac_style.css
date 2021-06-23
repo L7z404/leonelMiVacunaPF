@@ -76,15 +76,20 @@ button {
 }
 
 #container_dato_curp{
-    width: fit-content !important;
+    width: 40% !important;
     margin: auto;
     text-align: center;
     border: 5px solid blanchedalmond;
     display: inline-block;
     justify-content: center;
 }
+#curp_input{
+    margin-top: 1em;
+    width: 90% !important;
+}
 #bconfcurp{
     width: 150px;
+    margin: 1em 4em 0 0;
     float: right;
     background: #9F2141;
     color: #fff;
@@ -93,6 +98,7 @@ button {
  }
 #captcha{
     float: left;
+    margin: 0 0 2em 2em;
 }
 
 #info_a_curp{
