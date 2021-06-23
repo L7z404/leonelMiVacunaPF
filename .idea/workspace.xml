@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="add552e9-20d4-4048-9bed-6da15a5d712f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/vac_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/vac_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/vac_style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/vac_style2.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/confCurp.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/confCurp.php" afterDir="false" />
     </list>
@@ -86,7 +85,7 @@
       <workItem from="1624397056267" duration="59000" />
       <workItem from="1624397151020" duration="57000" />
       <workItem from="1624397223203" duration="2563000" />
-      <workItem from="1624456269211" duration="5314000" />
+      <workItem from="1624456269211" duration="10038000" />
     </task>
     <servers />
   </component>

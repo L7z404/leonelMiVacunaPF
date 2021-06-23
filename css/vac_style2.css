@@ -1,3 +1,4 @@
+
 #confCenterForm{
     /*background-color: #17a1b7;*/
     width: 70% !important;
@@ -5,3 +6,22 @@
     text-align: center;
     border: 5px solid blanchedalmond;
 }
+
+#textoConfigCurp>p{
+    text-align: justify;
+    margin: 1rem 2rem 1rem 2rem;
+}
+
+#botonVacu{
+    background: #9F2141;
+    color: #fff;
+}#botonVacu:hover{
+     background: #711D33;
+ }
+
+ #botonRegresar{
+     background: #98989A;
+     color: #fff;
+ }#botonRegresar:hover{
+      background: #757474;
+  }
