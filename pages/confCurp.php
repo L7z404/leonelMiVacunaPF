@@ -10,6 +10,15 @@
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../css/vac_style.css" type="text/css">
     <link rel="stylesheet" href="../css/vac_style2.css" type="text/css">
+
+    <script type="text/javascript">
+        function ActivarCampo(){
+            var contenedor = document.getElementById("LugarDatos");
+            contenedor.style.display = "block";
+            return true;
+        }
+    </script>
+
     <title>Mi Vacuna - Confirmación CURP</title>
 </head>
 <body>
@@ -93,12 +102,14 @@
                 <p>Se garantiza la protección de los datos personales en cumplimiento con la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados. Los datos personales y sensibles serán utilizados y vinculados para verificación y confirmación de la identidad dentro del marco de la planeación, implementación y aplicación de la Política Nacional de Vacunación y demás políticas sociales, así como para integrar expedientes y bases de datos necesarias para, en su caso, el otorgamiento y operación de políticas sociales del Gobierno Federal, así como las obligaciones que se deriven de estos y para mantener una base histórica con fines estadísticos y de obligaciones relativas a la transparencia, en términos de la normatividad y disposiciones aplicables. Consulte el aviso integral de privacidad en https://mivacuna.salud.gob.mx Lo anterior se informa en cumplimiento a los artículos 26, 27 y 28 de la Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados. La Política Nacional de Vacunación es de carácter público, ajeno a cualquier partido político. Queda prohibido su uso para fines distintos a los establecidos.</p>
             </div>
             <div id="botonesConfigCurp">
-                <button id="botonVacu" type="button" onclick=""><strong>Quiero Vacunarme</strong></button>
+                <button id="botonVacu" type="button" onclick="ActivarCampo();"><strong>Quiero Vacunarme</strong></button>
                 <br><br>
                 <button id="botonRegresar" type="button" onclick="window.location.href='../index.php'"><strong>Regresar</strong></button>
             </div>
             <div id="espacioDatos" style="margin-bottom: 1em"></div>
         </div>
+
+        <div id="LugarDatos" style="display:none;">	aaaaaaaaaaaaaaaaaaaaa</div>
     </form>
 
 </body>
