@@ -1,4 +1,5 @@
 <?php
+    $infocurp = $_POST["curp_input"];
 ?>
 <!doctype html>
 <html lang="es">
@@ -10,6 +11,7 @@
     <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="stylesheet" href="../css/vac_style.css" type="text/css">
     <link rel="stylesheet" href="../css/vac_style2.css" type="text/css">
+    <script src="../javascript/validaciones.js"></script>
 
     <script type="text/javascript">
         function ActivarCampo(){
@@ -42,7 +44,7 @@
 
     </div>
     <br><br><br>
-    <form id="confCenterForm" name="confCurpForm">
+    <form id="confCenterForm" name="confCurpForm" method="post" action="registroFolio.php">
         <div id="configCurp">
             <div id="info_a_curp">Confirmación de CURP</div>
 
@@ -50,29 +52,34 @@
 
                 <div id="espacioDatos" style="margin-top: 1em"></div>
                 <label for="txtNombre"><strong>Nombre:</strong>
-                    <input id="txtNombre" placeholder="Primer Nombre" style="width: 15%" />
+                    <input type="text" id="txtNombre" placeholder="Primer Nombre" style="width: 15%" />
                 </label>
 
                 <label for="txtApellidoP"><strong>Apellido Paterno:</strong>
-                    <input id="txtApellidoP" placeholder="Apellido Paterno" style="width: 15%" />
+                    <input type="text" id="txtApellidoP" placeholder="Apellido Paterno" style="width: 15%" />
                 </label>
 
                 <label for="txtApellidoM"><strong>Apellido Materno:</strong>
-                    <input id="txtApellidoM" placeholder="Apellido Materno" style="width: 15%" />
+                    <input type="text" id="txtApellidoM" placeholder="Apellido Materno" style="width: 15%" />
                 </label>
 
                 <br>
                 <label for="txtCurp"><strong>CURP:</strong>
-                    <input id="txtCurp" placeholder="CURP" style="width: 15%" />
+                    <input type="text" id="txtCurp" placeholder="CURP" style="width: 15%; background-color: #d4d3d3" value="<?php echo strtoupper($infocurp) ?>" disabled />
                 </label>
                 <label for="txtFechaNac"><strong>Fecha Nacimiento:</strong>
-                    <input id="txtFechaNac" placeholder="xx/xx/xxxx" style="width: 15%" />
+                    <input type="text" id="txtFechaNac" placeholder="xx/xx/xxxx" style="width: 15%" />
                 </label>
                 <label for="txtEntidadNac"><strong>Entidad Nacimiento:</strong>
-                    <input id="txtEntidadNac" placeholder="Entidad Nacimiento" style="width: 15%" />
+                    <input type="text" id="txtEntidadNac" placeholder="Entidad Nacimiento" style="width: 15%" />
                 </label>
-                <label for="txtSexo"><strong>Sexo:</strong>
-                    <input id="txtSexo" placeholder="Sexo" style="width: 15%" />
+                <label for="txtSexo"><i>Sexo:</i>
+                    <select id="txtSexo">
+                        <option selected disabled>--</option>
+                        <option>Hombre</option>
+                        <option>Mujer</option>
+                        <option>Otro</option>
+                    </select>
                 </label>
 
                 <br><br>
@@ -106,11 +113,66 @@
                 <br><br>
                 <button id="botonRegresar" type="button" onclick="window.location.href='../index.php'"><strong>Regresar</strong></button>
             </div>
-            <div id="espacioDatos" style="margin-bottom: 1em"></div>
+            <div id="espacioDatos" style="margin-bottom: 2em"></div>
         </div>
 
-        <div id="LugarDatos" style="display:none;">	aaaaaaaaaaaaaaaaaaaaa</div>
+        <div id="LugarDatos" style="display:none;">
+            <div id="info_a_curp">Lugar en donde voy a vacunarme y datos para localizarme</div>
+            <br>
+            <label for="comboEntidad"><i>Entidad:</i></label>
+            <select id="comboEntidad">
+                <option selected disabled>--</option>
+                <option>JALISCO</option>
+                <option>NAYARIT</option>
+                <option>MICHOACAN</option>
+                <option>GUANAJUATO</option>
+                <option>AGUASCALIENTES</option>
+            </select>
+            &ensp; &ensp; &ensp; &ensp;
+            <label for="comboMunicipio"><i>Municipio:</i></label>
+            <select id="comboMunicipio">
+                <option selected disabled>--</option>
+            </select>
+            &ensp; &ensp; &ensp; &ensp;
+            <label for="txtCP"><strong>Código Postal:</strong>
+                <input type="number" id="txtCP" placeholder="ej. 48640, 47760..." style="width: 15%" />
+            </label>
+            <br>
+
+            <label for="txtTelefono"><strong>Telefono(1):</strong>
+                <input type="text" id="txtTelefono" placeholder="ej. 3751042118" style="width: 15%" />
+            </label>
+
+            <label for="txtTelefono2"><strong>Telefono(2):</strong>
+                <input type="text" id="txtTelefono2" placeholder="ej. 4862153229" style="width: 15%" />
+            </label>
+
+            <label for="txtCorreo"><strong>Email:</strong>
+                <input type="email" id="txtCorreo" placeholder="ej. 4862153229" style="width: 15%" />
+            </label>
+
+            <label for="txtCorreo"><strong>Email Apoyo:</strong>
+                <input type="email" id="txtCorreo" placeholder="ej. 4862153229" style="width: 15%" />
+            </label>
+
+            <label for="txtCorreo"><strong>Domicilio completo o datos de contacto:</strong><br>
+                <textarea style="width: 70%"></textarea>
+            </label>
+
+            <br><br>
+            <div id="botonesConfigCurp">
+                <button id="botonVacu" type="button" onclick="return validaConfCurp();"><strong>Enviar</strong></button>
+            </div>
+            <br><br>
+        </div>
     </form>
 
 </body>
+    <footer>
+        <br><br>
+    <div id="texto_abajo_footer">
+        <p style="text-align: center; color: grey; font-family: 'Comic Sans MS',serif; font-size: 14px">La aplicación de la Política Nacional de Vacunación es de carácter público, ajena a cualquier partido político. Queda prohibido su uso para fines distintos a los establecidos.</p>
+    </div>
+    <div id="raya_baja_ultima_footer"></div>
+</footer>
 </html>

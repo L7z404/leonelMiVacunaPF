@@ -56,3 +56,30 @@ function curpValidaSubmit(){
         document.curpForm.submit();
     }
 }
+
+//Validar form
+function validaConfCurp(){
+    var nombre = document.getElementById('txtNombre').value;
+    var apaterno = document.getElementById('txtApellidoP').value;
+    var amaterno = document.getElementById('txtApellidoM').value;
+
+
+    if(nombre == null || nombre.length === 0 || /^\s+$/.test(nombre) || nombre.length > 45){
+        alert("Debes escribir tu nombre.");
+        document.getElementById("txtNombre").focus();
+        document.getElementById("txtNombre").style.background = '#FFF1FD';
+        return false;
+    }else if(apaterno == null || apaterno.length === 0 || /^\s+$/.test(apaterno) || apaterno.length > 45){
+        alert("Debes escribir tu apellido paterno.");
+        document.getElementById("txtApellidoP").focus();
+        document.getElementById("txtApellidoP").style.background = '#FFF1FD';
+        return false;
+    }else if(amaterno == null || amaterno.length === 0 || /^\s+$/.test(amaterno) || amaterno.length > 45){
+        alert("Debes escribir tu apellido materno.");
+        document.getElementById("txtApellidoM").focus();
+        document.getElementById("txtApellidoM").style.background = '#FFF1FD';
+        return false;
+    } else{
+        document.confCurpForm.submit();
+    }
+}

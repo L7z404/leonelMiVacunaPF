@@ -23,7 +23,7 @@
         <div id="raya_baja_cabeza"></div>
     </div>
     <br><br><br>
-    <form action="pages/confCurp.php" id="centerform" name="curpForm">
+    <form method="post" action="pages/confCurp.php" id="centerform" name="curpForm">
 
     <div id="container_dato_curp">
         <div id="info_a_curp">
@@ -36,8 +36,8 @@
         <div id="curp">
             <img alt="UserIcon" src="images/user.png">
 
-            <label>
-                <input type="text" id="curp_input" oninput="validarInput(this)" placeholder="Ingrese su CURP">
+            <label for="curp_input">
+                <input type="text" id="curp_input" name="curp_input" oninput="validarInput(this)" placeholder="Ingrese su CURP">
             </label>
             <pre id="resultado"></pre>
 
