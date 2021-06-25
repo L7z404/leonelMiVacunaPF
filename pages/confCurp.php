@@ -65,22 +65,59 @@
 
                 <br>
                 <label for="txtCurp"><strong>CURP:</strong>
-                    <input type="text" id="txtCurp" placeholder="CURP" style="width: 15%; background-color: #d4d3d3" value="<?php echo strtoupper($infocurp) ?>" disabled />
+                    <input type="text" id="txtCurp" placeholder="CURP" style="width: 20%; background-color: #d4d3d3" value="<?php echo strtoupper($infocurp) ?>" disabled />
                 </label>
+                &ensp; &ensp; &ensp; &ensp;
                 <label for="txtFechaNac"><strong>Fecha Nacimiento:</strong>
-                    <input type="text" id="txtFechaNac" placeholder="xx/xx/xxxx" style="width: 15%" />
+                    <input type="date" id="txtFechaNac" style="width: 15%" />
                 </label>
-                <label for="txtEntidadNac"><strong>Entidad Nacimiento:</strong>
-                    <input type="text" id="txtEntidadNac" placeholder="Entidad Nacimiento" style="width: 15%" />
-                </label>
-                <label for="txtSexo"><i>Sexo:</i>
-                    <select id="txtSexo">
-                        <option selected disabled>--</option>
-                        <option>Hombre</option>
-                        <option>Mujer</option>
-                        <option>Otro</option>
-                    </select>
-                </label>
+
+                <br>
+
+                <label for="txtEntidadNac"><strong>Entidad Nacimiento:</strong></label>
+                <select id="txtEntidadNac">
+                    <option value='0' selected disabled>--</option>
+                    <option value='AGUASCALIENTES'>AGUASCALIENTES</option>
+                    <option value='BAJA CALIFORNIA'>BAJA CALIFORNIA</option>
+                    <option value='BAJA CALIFORNIA SUR'>BAJA CALIFORNIA SUR</option>
+                    <option value='CAMPECHE'>CAMPECHE</option>
+                    <option value='CHIAPAS'>CHIAPAS</option>
+                    <option value='CHIHUAHUA'>CHIHUAHUA</option>
+                    <option value='COAHUILA'>COAHUILA</option>
+                    <option value='COLIMA'>COLIMA</option>
+                    <option value='DISTRITO'>DISTRITO FEDERAL</option>
+                    <option value='DURANGO'>DURANGO</option>
+                    <option value='GUANAJUATO'>GUANAJUATO</option>
+                    <option value='GUERRERO'>GUERRERO</option>
+                    <option value='HIDALGO'>HIDALGO</option>
+                    <option value='JALISCO'>JALISCO</option>
+                    <option value='MEXICO'>MEXICO</option>
+                    <option value='MICHOACAN'>MICHOACAN</option>
+                    <option value='MORELOS'>MORELOS</option>
+                    <option value='NAYARIT'>NAYARIT</option>
+                    <option value='NUEVO LEON'>NUEVO LEON</option>
+                    <option value='OAXACA'>OAXACA</option>
+                    <option value='PUEBLA'>PUEBLA</option>
+                    <option value='QUERETARO'>QUERETARO</option>
+                    <option value='QUINTANA ROO'>QUINTANA ROO</option>
+                    <option value='SAN LUIS POTOSI'>SAN LUIS POTOSI</option>
+                    <option value='SINALOA'>SINALOA</option>
+                    <option value='SONORA'>SONORA</option>
+                    <option value='TABASCO'>TABASCO</option>
+                    <option value='TAMAULIPAS'>TAMAULIPAS</option>
+                    <option value='TLAXCALA'>TLAXCALA</option>
+                    <option value='VERACRUZ'>VERACRUZ</option>
+                    <option value='YUCATAN'>YUCATAN</option>
+                    <option value='ZACATECAS'>ZACATECAS</option>
+                </select>
+                &ensp; &ensp; &ensp; &ensp;
+                <label for="txtSexo"><i>Sexo:</i></label>
+                <select id="txtSexo">
+                    <option selected disabled>--</option>
+                    <option>Hombre</option>
+                    <option>Mujer</option>
+                    <option>Otro</option>
+                </select>
 
                 <br><br>
                 <label for="comboPostracion"><i>¿Se encuentra en estado de postración?</i></label>

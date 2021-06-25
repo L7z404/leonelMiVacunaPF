@@ -1,4 +1,5 @@
 <?php
+    $folio = "fol-" . rand(100000,999999);
 ?>
 
 <!doctype html>
@@ -11,6 +12,7 @@
     <title>Mi Vacuna - Folio</title>
 </head>
 <body>
-
+    Test folio:
+    Tu folio es el siguiente>>>>>>>>>>>>>> <?php echo $folio ?>
 </body>
 </html>
