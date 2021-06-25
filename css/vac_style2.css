@@ -19,9 +19,27 @@
      background: #711D33;
  }
 
+#botonExpe{
+    background: #206151;
+    color: #fff;
+}#botonExpe:hover{
+     background: #1a473c;
+ }
+
  #botonRegresar{
      background: #232235;
      color: #fff;
  }#botonRegresar:hover{
       background: #757474;
+  }
+
+  .resultadoP{
+      color: #e2100e;
+      font-size: 25px;
+  }
+
+  .resultadoI{
+      font-size: 20px;
+      background-color: #aaa8a8;
+      color: black;
   }

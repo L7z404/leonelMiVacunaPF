@@ -25,13 +25,13 @@
 </head>
 <body>
     <div id="all_cabeza">
-    <div id="raya_alta_cabeza"></div>
-    <div id="centro_cabeza">
-        <div id="imgDiv"></div>
+        <div id="raya_alta_cabeza"></div>
+        <div id="centro_cabeza">
+            <div id="imgDiv"></div>
+        </div>
+        <div id="pie_cabeza"></div>
+        <div id="raya_baja_cabeza"></div>
     </div>
-    <div id="pie_cabeza"></div>
-    <div id="raya_baja_cabeza"></div>
-</div>
     <br><br><br>
     <div id="botones_abajo_index" >
         <button id="bregmivac" type="button"><a style="text-decoration: none; color: #fff" href="https://mivacuna.salud.gob.mx/pdf/registro_vacuna_imgns_c6.pdf" target="_blank">Guía Para Registrarse en mivacuna</a></button>
@@ -44,6 +44,7 @@
 
     </div>
     <br><br><br>
+
     <form id="confCenterForm" name="confCurpForm" method="post" action="registroFolio.php">
         <div id="configCurp">
             <div id="info_a_curp">Confirmación de CURP</div>
