@@ -51,7 +51,7 @@
                 <p>Este aviso NO es una cita para la vacunación, en breve lo contactaremos. La convocatoria a los puntos de vacunación depende de la disponibilidad de las vacunas. <strong>Para facilitar el proceso en el centro de vacunación le sugerimos descargar e imprimir su expediente de vacunación.</strong></p>
             </div>
             <div id="botonesConfigCurp">
-                <button id="botonExpe" type="button"><strong>Expediente de vacunación</strong></button>
+                <a href="reporte_imprimir.php?folio=<?php echo $folio?>"><button id="botonExpe" type="button"><strong>Expediente de vacunación</strong></button></a>
             </div>
             <div id="espacioDatos" style="margin-bottom: 2em"></div>
         </div>
