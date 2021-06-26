@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="../css/vac_style.css" type="text/css">
     <link rel="stylesheet" href="../css/vac_style2.css" type="text/css">
     <title>Mi Vacuna - Folio</title>
+    <script language="JavaScript">
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
+
+        function alertandredirect(){
+            alert("Sera llamado al numero de telfono propocionado. Regresando a inicio.");
+            window.location.href = "../index.php";
+        }
+    </script>
 </head>
 <body>
 
@@ -36,7 +47,7 @@
     </div>
     <br><br><br>
 
-    <form id="confCenterForm" name="confCurpForm" method="post" action="registroFolio.php">
+    <form id="confCenterForm" name="confCurpForm" method="post" action="reporte_imprimir.php.php">
         <div id="configCurp">
             <div id="info_a_curp">Resultado</div>
             <br>
@@ -52,6 +63,9 @@
             </div>
             <div id="botonesConfigCurp">
                 <a href="reporte_imprimir.php?folio=<?php echo $folio?>"><button id="botonExpe" type="button"><strong>Expediente de vacunación</strong></button></a>
+                <br><br>
+                <button id="botonExpes" type="button" onclick="alertandredirect()"><strong>En caso de error, solicitar llamada de aclaración</strong></button>
+
             </div>
             <div id="espacioDatos" style="margin-bottom: 2em"></div>
         </div>

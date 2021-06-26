@@ -26,6 +26,13 @@
      background: #1a473c;
  }
 
+#botonExpes{
+    background: #696767;
+    color: #fff;
+}#botonExpes:hover{
+     background: #484848;
+ }
+
  #botonRegresar{
      background: #232235;
      color: #fff;

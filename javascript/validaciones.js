@@ -62,6 +62,24 @@ function validaConfCurp(){
     var nombre = document.getElementById('txtNombre').value;
     var apaterno = document.getElementById('txtApellidoP').value;
     var amaterno = document.getElementById('txtApellidoM').value;
+    var CURP = document.getElementById('txtCurp').value;
+    var fecNac = document.getElementById('txtFechaNac').value;
+    var entidadNac = document.getElementById("txtEntidadNac").selectedIndex;
+    var sexo = document.getElementById("txtSexo").selectedIndex;
+    var postracion = document.getElementById("comboPostracion").selectedIndex;
+    var diabetes = document.getElementById("comboDiabetes").selectedIndex;
+    var hipertension = document.getElementById("comboHiperten").selectedIndex;
+
+    var entidadvacuna = document.getElementById("comboEntidad").selectedIndex;
+    var municipio = document.getElementById("comboMunicipio").selectedIndex;
+    var codigopostal = document.getElementById('txtCP').value;
+    var telefono = document.getElementById('txtTelefono').value;
+    var telefono2 = document.getElementById('txtTelefono2').value;
+    var correo = document.getElementById('txtCorreo').value;
+    var correo2 = document.getElementById('txtCorreo2').value;
+    var DD = document.getElementById('DomicilioDatos').value;
+
+
 
 
     if(nombre == null || nombre.length === 0 || /^\s+$/.test(nombre) || nombre.length > 45){
@@ -78,6 +96,44 @@ function validaConfCurp(){
         alert("Debes escribir tu apellido materno.");
         document.getElementById("txtApellidoM").focus();
         document.getElementById("txtApellidoM").style.background = '#FFF1FD';
+        return false;
+    } else if(CURP == null || CURP.length === 0 || CURP === "" || CURP.length < 18 || CURP.length > 19){
+        alert("No se detecto una curp valida");
+        document.getElementById("txtCurp").focus();
+        document.getElementById("txtCurp").style.background = '#FFF1FD';
+        return false;
+    } else if(fecNac == null || fecNac.length === 0 || fecNac === ""){
+        alert("No se detecto una fecha de nacimiento");
+        document.getElementById("txtFechaNac").focus();
+        document.getElementById("txtFechaNac").style.background = '#FFF1FD';
+        return false;
+    } else if(entidadNac == null || entidadNac == 0){
+        alert("Elige una entidad de nacimiento");
+        document.getElementById("txtEntidadNac").focus();
+        return false;
+    } else if(sexo == null || sexo == 0){
+        alert("Elige un sexo");
+        document.getElementById("txtSexo").focus();
+        return false;
+    } else if(postracion == null || postracion == 0){
+        alert("Elige si esta en estado de postración");
+        document.getElementById("comboPostracion").focus();
+        return false;
+    } else if(diabetes == null || diabetes == 0){
+        alert("Elige si padece de diabetes");
+        document.getElementById("comboDiabetes").focus();
+        return false;
+    } else if(hipertension == null || hipertension == 0){
+        alert("Elige si padece de hipertension");
+        document.getElementById("comboHiperten").focus();
+        return false;
+    } else if(entidadvacuna == null || entidadvacuna == 0){
+        alert("Elige una entidad en donde desea vacunarse");
+        document.getElementById("comboEntidad").focus();
+        return false;
+    } else if(municipio == null || municipio == 0){
+        alert("Elige un municipio");
+        document.getElementById("comboMunicipio").focus();
         return false;
     } else{
         document.confCurpForm.submit();
