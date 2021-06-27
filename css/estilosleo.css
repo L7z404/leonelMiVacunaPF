@@ -1,0 +1,170 @@
+/* ----- Alinear todo en el centro ----- */
+html,
+body {
+    height: 100%;
+    width: 50%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: top;
+}
+
+/* ----- ------------------------------ ----- */
+
+body,
+div,
+form,
+input,
+select,
+textarea,
+p {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+}
+
+h1 {
+    position: absolute;
+    margin: 0;
+    font-size: 32px;
+    color: #fff;
+    z-index: 2;
+}
+
+.testbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    padding: 20px;
+    width: 100%;
+}
+
+form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px 0 #bf9d67;
+}
+
+.banner {
+    margin: 0 0 0 9em;
+    position: relative;
+    height: 100px;
+    background-image: url("../images/gmx.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*.banner::after {*/
+/*    content: "";*/
+/*    background-color: rgba(0, 0, 0, 0.6);*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+
+input,
+textarea,
+select {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input {
+    width: calc(100% - 10px);
+    padding: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 7px 0;
+    background: transparent;
+}
+
+.optionB{
+    font-weight: bold;
+    color: #97203e;
+}
+
+textarea {
+    width: calc(100% - 12px);
+    padding: 5px;
+}
+
+.item:hover p,
+.item:hover i,
+input:hover::placeholder {
+    color: #99203f;
+}
+
+.item input:hover,
+.item select:hover,
+.item textarea:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 6px 0 #01708b;
+    color: #01708b;
+}
+
+.item select:hover{
+    cursor: pointer;
+}
+
+.item {
+    position: relative;
+    margin: 10px 0;
+}
+
+
+.btn-block {
+    margin-top: 10px;
+    text-align: center;
+}
+
+option:nth-child(1) {
+    color: #01708b;
+    font-weight: bold;
+}
+
+.buttonb{
+    background: #01708b;
+}
+.buttonb:hover {
+    background: grey;
+}
+
+button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2e2f37;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #9e2141;
+}
+
+
+.placeMuestra::placeholder {
+    color: #9e2141;
+    font-weight: bold;
+}

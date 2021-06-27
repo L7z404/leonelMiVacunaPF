@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    if ($_SESSION["validado"]!="true"){
+        header("Location: ../index.php");
+        exit;
+    }
+
     $infocurp = $_POST["txtCurp"];
     $folio = "fol-" . rand(100000,999999);
 
@@ -22,7 +28,7 @@
 
         function alertandredirect(){
             alert("Sera llamado al numero de telefono propocionado. Regresando a inicio.");
-            window.location.href = "../index.php";
+            window.location.href = "inicio.php";
         }
     </script>
 </head>

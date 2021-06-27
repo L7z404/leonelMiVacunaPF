@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    if ($_SESSION["validado"]!="true"){
+        header("Location: ../index.php");
+        exit;
+    }
+
     $infocurp = $_POST["curp_input"];
 ?>
 <!doctype html>
@@ -149,7 +155,7 @@
             <div id="botonesConfigCurp">
                 <button id="botonVacu" type="button" onclick="ActivarCampo();"><strong>Quiero Vacunarme</strong></button>
                 <br><br>
-                <button id="botonRegresar" type="button" onclick="window.location.href='../index.php'"><strong>Regresar</strong></button>
+                <button id="botonRegresar" type="button" onclick="window.location.href='inicio.php'"><strong>Regresar</strong></button>
             </div>
             <div id="espacioDatos" style="margin-bottom: 2em"></div>
         </div>

@@ -168,3 +168,24 @@ function validaConfCurp(){
         document.confCurpForm.submit();
     }
 }
+
+//Valida Login
+function ValidaFormLogin(){
+    var user = document.getElementById("txtusuario").value;
+
+    var pass = document.getElementById("txtpassword").value;
+
+    if(user == null || user.length == 0 || /^\s+$/.test(user))
+    {
+        alert("Debes escribir tu usuario");
+        document.getElementById("txtusuario").focus();
+        return false;
+    } else if (pass == null || pass.length == 0 || ! /^([0-9])*$/.test(pass)){
+        alert("Debes escribir tu NIP numerico");
+        document.getElementById("txtpassword").value = "";
+        document.getElementById("txtpassword").focus();
+        return false;
+    }else {
+        document.loginForm.submit();
+    }
+}
