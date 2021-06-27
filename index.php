@@ -19,7 +19,7 @@
         <div id="centro_cabeza">
             <div id="imgDiv"></div>
         </div>
-        <div id="pie_cabeza"></div>
+        <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0"> <strong>Se recomienda Chrome para la mejor experiencia</strong> <img style="height: 30px" src="images/chromeicon.png"></div>
         <div id="raya_baja_cabeza"></div>
     </div>
     <br><br><br>
