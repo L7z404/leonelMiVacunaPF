@@ -179,23 +179,24 @@
             <br>
 
             <label for="txtTelefono"><strong>Telefono(1):</strong>
-                <input type="text" id="txtTelefono" placeholder="ej. 3751042118" style="width: 15%" />
+                <input type="text" id="txtTelefono" placeholder="ej. 3751042118" style="width: 10%" />
             </label>
 
             <label for="txtTelefono2"><strong>Telefono(2):</strong>
-                <input type="text" id="txtTelefono2" placeholder="ej. 4862153229" style="width: 15%" />
+                <input type="text" id="txtTelefono2" placeholder="ej. 4862153229" style="width: 10%" />
             </label>
 
             <label for="txtCorreo"><strong>Email:</strong>
-                <input type="email" id="txtCorreo" placeholder="ej. 4862153229" style="width: 15%" />
+                <input type="email" id="txtCorreo" placeholder="test@test.com" style="width: 15%" />
             </label>
 
             <label for="txtCorreo2"><strong>Email Apoyo:</strong>
-                <input type="email" id="txtCorreo2" placeholder="ej. 4862153229" style="width: 15%" />
+                <input type="email" id="txtCorreo2" placeholder="test@test.com" style="width: 15%" />
             </label>
 
+            <br>
             <label for="DomicilioDatos"><strong>Domicilio completo o datos de contacto:</strong><br>
-                <textarea id="DomicilioDatos" style="width: 70%"></textarea>
+                <textarea id="DomicilioDatos" name="DomicilioDatos" style="width: 70%"></textarea>
             </label>
 
             <br><br>

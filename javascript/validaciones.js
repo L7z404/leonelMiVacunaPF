@@ -135,7 +135,36 @@ function validaConfCurp(){
         alert("Elige un municipio");
         document.getElementById("comboMunicipio").focus();
         return false;
-    } else{
+    } else if(codigopostal == null || codigopostal.length === 0 || codigopostal.length < 5 || codigopostal.length > 6){
+        alert("No se detecto un codigo postal valido");
+        document.getElementById("txtCP").focus();
+        document.getElementById("txtCP").style.background = '#FFF1FD';
+        return false;
+    } else if(telefono == null || telefono.length === 0 || telefono.length < 10 || telefono.length > 11){
+        alert("No se detecto un telefono valido");
+        document.getElementById("txtTelefono").focus();
+        document.getElementById("txtTelefono").style.background = '#FFF1FD';
+        return false;
+    } else if(telefono2 == null || telefono2.length === 0 || telefono2.length < 10 || telefono2.length > 11){
+        alert("No se detecto un telefono secundario valido");
+        document.getElementById("txtTelefono2").focus();
+        document.getElementById("txtTelefono2").style.background = '#FFF1FD';
+        return false;
+    } else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correo))){
+        alert("Has ingresado un correo invalido!");
+        document.getElementById("txtCorreo").focus();
+        document.getElementById("txtCorreo").style.background = '#FFF1FD';
+        return false;
+    }  else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correo2))){
+        alert("Has ingresado un correo de apoyo invalido!");
+        document.getElementById("txtCorreo2").focus();
+        document.getElementById("txtCorreo2").style.background = '#FFF1FD';
+        return false;
+    }  else if(DD == null || DD.length === 0 || DD === ""){
+        alert("No has escrito el domicilio o datos de contacto");
+        document.getElementById("DomicilioDatos").focus();
+        return false;
+    }  else{
         document.confCurpForm.submit();
     }
 }
