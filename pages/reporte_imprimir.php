@@ -1,5 +1,6 @@
 <?php
     $folio = $_GET['folio'];
+    $curp = $_GET['curp'];
 
     ob_start();
     ?>
@@ -13,6 +14,7 @@
 <body>
     SI JALO LA IMPRIMIRDA
     con el folio: <?php echo $folio ?>
+    y con la curp: <?php echo $curp ?>
 </body>
 </html>
 

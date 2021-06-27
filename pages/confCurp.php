@@ -45,7 +45,7 @@
     </div>
     <br><br><br>
 
-    <form id="confCenterForm" name="confCurpForm" method="post" action="registroFolio.php">
+    <form method="post" id="confCenterForm" name="confCurpForm" action="registroFolio.php">
         <div id="configCurp">
             <div id="info_a_curp">Confirmación de CURP</div>
 
@@ -66,7 +66,7 @@
 
                 <br>
                 <label for="txtCurp"><strong>CURP:</strong>
-                    <input type="text" id="txtCurp" placeholder="CURP" style="width: 20%; background-color: #d4d3d3" value="<?php echo strtoupper($infocurp) ?>" />
+                    <input type="text" id="txtCurp" name="txtCurp" style="width: 20%; background-color: #d4d3d3" value="<?php echo strtoupper($infocurp) ?>" />
                 </label>
                 &ensp; &ensp; &ensp; &ensp;
                 <label for="txtFechaNac"><strong>Fecha Nacimiento:</strong>

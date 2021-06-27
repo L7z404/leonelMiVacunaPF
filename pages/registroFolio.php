@@ -1,5 +1,7 @@
 <?php
+    $infocurp = $_POST["txtCurp"];
     $folio = "fol-" . rand(100000,999999);
+
 ?>
 
 <!doctype html>
@@ -19,7 +21,7 @@
         });
 
         function alertandredirect(){
-            alert("Sera llamado al numero de telfono propocionado. Regresando a inicio.");
+            alert("Sera llamado al numero de telefono propocionado. Regresando a inicio.");
             window.location.href = "../index.php";
         }
     </script>
@@ -47,7 +49,7 @@
     </div>
     <br><br><br>
 
-    <form id="confCenterForm" name="confCurpForm" method="post" action="reporte_imprimir.php.php">
+    <form id="confCenterForm" name="confCurpForm" method="post" action="reporte_imprimir.php">
         <div id="configCurp">
             <div id="info_a_curp">Resultado</div>
             <br>
@@ -55,14 +57,14 @@
                 <p class="resultadoP">Ud. ha sido registrado exitosamente.</p>
                 <p class="resultadoP">Con el folio: <i class="resultadoI"><strong><?php echo $folio ?></strong></i></p>
                 <p class="resultadoP">Espere nuestra llamada donde le indicaremos su fecha y lugar de vacunacion</p>
-                <p class="resultadoP">CURP: <i class="resultadoI"><strong><?php echo "poner curp aqui" ?></strong></i></p>
+                <p class="resultadoP">CURP: <i class="resultadoI"><strong><?php echo $infocurp ?></strong></i></p>
             </div>
             <br>
             <div id="textoConfigCurp" >
                 <p>Este aviso NO es una cita para la vacunación, en breve lo contactaremos. La convocatoria a los puntos de vacunación depende de la disponibilidad de las vacunas. <strong>Para facilitar el proceso en el centro de vacunación le sugerimos descargar e imprimir su expediente de vacunación.</strong></p>
             </div>
             <div id="botonesConfigCurp">
-                <a href="reporte_imprimir.php?folio=<?php echo $folio?>"><button id="botonExpe" type="button"><strong>Expediente de vacunación</strong></button></a>
+                <a href="reporte_imprimir.php?folio=<?php echo $folio?>&curp=<?php echo $infocurp ?>"><button id="botonExpe" type="button"><strong>Expediente de vacunación</strong></button></a>
                 <br><br>
                 <button id="botonExpes" type="button" onclick="alertandredirect()"><strong>En caso de error, solicitar llamada de aclaración</strong></button>
 
