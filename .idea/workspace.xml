@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="add552e9-20d4-4048-9bed-6da15a5d712f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/estilosleo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/conn_mysql_leonel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/inicio.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/validacion.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/validaciones.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/validaciones.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/confCurp.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/confCurp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/registroFolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/registroFolio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/reporte_imprimir.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/reporte_imprimir.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +54,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -111,7 +106,7 @@
       <workItem from="1624767697435" duration="2174000" />
       <workItem from="1624770238827" duration="550000" />
       <workItem from="1624772353753" duration="57000" />
-      <workItem from="1624815427114" duration="2540000" />
+      <workItem from="1624815427114" duration="3901000" />
     </task>
     <servers />
   </component>

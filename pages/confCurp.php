@@ -5,6 +5,16 @@
         exit;
     }
 
+    require_once "conn_mysql_leonel.php";
+
+    $sql = 'SELECT * FROM entidades';
+    $stmt = $conn->query($sql);
+    $rows = $stmt->fetchAll();
+
+    $sql2 = 'SELECT * FROM municipios';
+    $stmts = $conn->query($sql2);
+    $rowe = $stmts->fetchAll();
+
     $infocurp = $_POST["curp_input"];
 ?>
 <!doctype html>
@@ -84,38 +94,13 @@
                 <label for="txtEntidadNac"><strong>Entidad Nacimiento:</strong></label>
                 <select id="txtEntidadNac" name="txtEntidadNac">
                     <option value="0" selected disabled>--</option>
-                    <option value="AGUASCALIENTES">AGUASCALIENTES</option>
-                    <option value="BAJA CALIFORNIA">BAJA CALIFORNIA</option>
-                    <option value="BAJA CALIFORNIA SUR">BAJA CALIFORNIA SUR</option>
-                    <option value="CAMPECHE">CAMPECHE</option>
-                    <option value="CHIAPAS">CHIAPAS</option>
-                    <option value="CHIHUAHUA">CHIHUAHUA</option>
-                    <option value="COAHUILA">COAHUILA</option>
-                    <option value="COLIMA">COLIMA</option>
-                    <option value="DISTRITO">DISTRITO FEDERAL</option>
-                    <option value="DURANGO">DURANGO</option>
-                    <option value="GUANAJUATO">GUANAJUATO</option>
-                    <option value="GUERRERO">GUERRERO</option>
-                    <option value="HIDALGO">HIDALGO</option>
-                    <option value="JALISCO">JALISCO</option>
-                    <option value="MEXICO">MEXICO</option>
-                    <option value="MICHOACAN">MICHOACAN</option>
-                    <option value="MORELOS">MORELOS</option>
-                    <option value="NAYARIT">NAYARIT</option>
-                    <option value="NUEVO LEON">NUEVO LEON</option>
-                    <option value="OAXACA">OAXACA</option>
-                    <option value="PUEBLA">PUEBLA</option>
-                    <option value="QUERETARO">QUERETARO</option>
-                    <option value="QUINTANA ROO">QUINTANA ROO</option>
-                    <option value="SAN LUIS POTOSI">SAN LUIS POTOSI</option>
-                    <option value="SINALOA">SINALOA</option>
-                    <option value="SONORA">SONORA</option>
-                    <option value="TABASCO">TABASCO</option>
-                    <option value="TAMAULIPAS">TAMAULIPAS</option>
-                    <option value="TLAXCALA">TLAXCALA</option>
-                    <option value="VERACRUZ">VERACRUZ</option>
-                    <option value="YUCATAN">YUCATAN</option>
-                    <option value="ZACATECAS">ZACATECAS</option>
+                    <?php
+                    foreach ($rows as $row) {
+                        echo '<option value="' .
+                            $row['id_entidad'] . '">' .
+                            $row['entidad'] . '</option>';
+                    }
+                    ?>
                 </select>
                 &ensp; &ensp; &ensp; &ensp;
                 <label for="txtSexo"><i>Sexo:</i></label>
@@ -166,17 +151,25 @@
             <label for="comboEntidad"><i>Entidad:</i></label>
             <select id="comboEntidad">
                 <option selected disabled>--</option>
-                <option>JALISCO</option>
-                <option>NAYARIT</option>
-                <option>MICHOACAN</option>
-                <option>GUANAJUATO</option>
-                <option>AGUASCALIENTES</option>
+                <?php
+                foreach ($rows as $row) {
+                    echo '<option value="' .
+                        $row['id_entidad'] . '">' .
+                        $row['entidad'] . '</option>';
+                }
+                ?>
             </select>
             &ensp; &ensp; &ensp; &ensp;
             <label for="comboMunicipio"><i>Municipio:</i></label>
             <select id="comboMunicipio">
                 <option selected disabled>--</option>
-                <option value="test">test</option>
+                <?php
+                foreach ($rowe as $row) {
+                    echo '<option value="' .
+                        $row['id_municipio'] . '">' .
+                        $row['municipio'] . '</option>';
+                }
+                ?>
             </select>
             &ensp; &ensp; &ensp; &ensp;
             <label for="txtCP"><strong>Código Postal:</strong>
