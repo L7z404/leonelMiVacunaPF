@@ -142,10 +142,10 @@ option:nth-child(1) {
 }
 
 .buttonb{
-    background: #01708b;
+    background: #9d2141;
 }
 .buttonb:hover {
-    background: grey;
+    background: #450216;
 }
 
 button {

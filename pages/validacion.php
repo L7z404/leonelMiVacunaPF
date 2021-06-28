@@ -14,7 +14,7 @@
     if ($cantidad > 0){
         $_SESSION["validado"]="true";
         $conn = null;
-        header("Location: inicio.php");
+        header("Location: menu.php");
         exit;
     }else{
         $conn = null;
