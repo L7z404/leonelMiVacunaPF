@@ -29,6 +29,41 @@
     <link rel="stylesheet" href="../css/vac_style2.css" type="text/css">
     <script src="../javascript/validaciones.js"></script>
 
+    <script language="JavaScript" type="text/javascript">
+        function create_object_XMLHttpRequest() {
+            try {
+                objeto = new XMLHttpRequest();
+            } catch (err1) {
+                try {
+                    objeto = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (err2) {
+                    try {
+                        objeto = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (err3) {
+                        objeto = false;
+                    }
+                }
+            }
+            return objeto;
+        }
+
+        var objeto_AJAX = create_object_XMLHttpRequest();
+
+        function getMuni() {
+            var URL = "getMunicipios.php";
+            objeto_AJAX.open("POST", URL, true);
+            objeto_AJAX.onreadystatechange = muestraResultado;
+            objeto_AJAX.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            objeto_AJAX.send("municipio_selected=" + document.getElementById("comboEntidad").value);
+        }
+
+        function muestraResultado() {
+            if (objeto_AJAX.readyState == 4 && objeto_AJAX.status == 200) {
+                document.getElementById("comboMunicipio").innerHTML = objeto_AJAX.responseText;
+            }
+        }
+    </script>
+
     <script type="text/javascript">
         function ActivarCampo(){
             var contenedor = document.getElementById("LugarDatos");
@@ -149,7 +184,7 @@
             <div id="info_a_curp">Lugar en donde voy a vacunarme y datos para localizarme</div>
             <br>
             <label for="comboEntidad"><i>Entidad:</i></label>
-            <select id="comboEntidad">
+            <select id="comboEntidad" onchange="javascript:getMuni();">
                 <option selected disabled>--</option>
                 <?php
                 foreach ($rows as $row) {
@@ -162,14 +197,7 @@
             &ensp; &ensp; &ensp; &ensp;
             <label for="comboMunicipio"><i>Municipio:</i></label>
             <select id="comboMunicipio">
-                <option selected disabled>--</option>
-                <?php
-                foreach ($rowe as $row) {
-                    echo '<option value="' .
-                        $row['id_municipio'] . '">' .
-                        $row['municipio'] . '</option>';
-                }
-                ?>
+
             </select>
             &ensp; &ensp; &ensp; &ensp;
             <label for="txtCP"><strong>Código Postal:</strong>
