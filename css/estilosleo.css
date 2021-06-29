@@ -58,15 +58,16 @@ form {
 }
 
 .banner {
-    margin: 0 0 0 9em;
+    /*margin: 0 0 0 9em;*/
     position: relative;
     height: 100px;
-    background-image: url("../images/gmx.png");
+    /*background-color: black;*/
+    /*background-image: url("../images/gmx.png");*/
     background-size: contain;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
     text-align: center;
 }
 

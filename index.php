@@ -21,7 +21,7 @@
 <div class="testbox">
     <form action="pages/validacion.php" method="post" id="formLogin" name="loginForm">
         <div class="banner">
-
+                <img src="images/gmx.png">
         </div>
         <div class="item">
             <p><strong>Usuario:</strong></p>
