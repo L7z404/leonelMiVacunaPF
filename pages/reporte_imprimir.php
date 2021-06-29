@@ -28,8 +28,12 @@
     $correo2 = $_POST["txtCorreo2"];
     $domDatos = $_POST["DomicilioDatos"];
 
+    $municipioNom = $_POST["txtMunicipioNombre"];
+    $entidadNom = $_POST["txtEntidadNombre"];
+
     $hoy = new DateTime();
     $hoystring = $hoy->format('d-m-Y');
+
 
     ob_start();
     ?>
@@ -133,8 +137,8 @@
                 <td style="width: 14.2857%;">X</td>
                 <td style="width: 14.2857%;">X</td>
                 <td style="width: 14.2857%;"><?php echo $codigoP ?></td>
-                <td style="width: 14.2857%;"><?php echo $municipio ?></td>
-                <td style="width: 14.2857%;"><?php echo $entidadLugar ?></td>
+                <td style="width: 14.2857%;"><?php echo $entidadNom ?></td>
+                <td style="width: 14.2857%;"><?php echo $municipioNom ?></td>
             </tr>
             </tbody>
         </table>

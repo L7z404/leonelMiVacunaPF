@@ -38,6 +38,14 @@
                                      '$telefono2', '$correo', '$correo2', '$domDatos', '$folio', '$entidad')";
 
     $conn->exec($sql);
+
+    $sql2 = "SELECT municipio FROM municipios where id='$municipio'";
+    $stmt = $conn->query($sql2);
+    $rows = $stmt->fetchAll();
+
+    $sql3 = "SELECT entidad FROM entidades WHERE id_entidad = '$entidadLugar'";
+    $result7 = $conn->query($sql3);
+    $rows7 = $result7->fetchAll();
 ?>
 
 <!doctype html>
@@ -94,7 +102,10 @@
                 <p class="resultadoP">Con el folio:<input type="text" id="txtfolio" name="txtfolio" style="width: 20%; background-color: #d4d3d3" value="<?php echo $folio ?>" /></p>
                 <p class="resultadoP">Espere nuestra llamada donde le indicaremos su fecha y lugar de vacunacion</p>
                 <p class="resultadoP">CURP:<input type="text" id="txtCurp" name="txtCurp" style="width: 20%; background-color: #d4d3d3" value="<?php echo $infocurp ?>" /></p>
-                <p>Agregar los input escondidos aqui..</p>
+
+                <input hidden type="text" id="txtMunicipioNombre" name="txtMunicipioNombre" style="width: 20%; background-color: #d4d3d3" value="<?php foreach ($rows as $row){ echo $row['municipio']; } ?>" />
+                <input hidden type="text" id="txtEntidadNombre" name="txtEntidadNombre" style="width: 20%; background-color: #d4d3d3" value="<?php foreach ($rows7 as $rowe){ echo $rowe['entidad']; } ?>" />
+
                 <input hidden type="text" id="txtNombre" name="txtNombre" style="width: 20%; background-color: #d4d3d3" value="<?php echo $nombre ?>" />
                 <input hidden type="text" id="txtApellidoP" name="txtApellidoP" style="width: 20%; background-color: #d4d3d3" value="<?php echo $apaterno ?>" />
                 <input hidden type="text" id="txtApellidoM" name="txtApellidoM" style="width: 20%; background-color: #d4d3d3" value="<?php echo $amaterno ?>" />
@@ -104,7 +115,6 @@
                 <input hidden type="text" id="comboPostracion" name="comboPostracion" style="width: 20%; background-color: #d4d3d3" value="<?php echo $postracion ?>" />
                 <input hidden type="text" id="comboDiabetes" name="comboDiabetes" style="width: 20%; background-color: #d4d3d3" value="<?php echo $diabetes ?>" />
                 <input hidden type="text" id="comboHiperten" name="comboHiperten" style="width: 20%; background-color: #d4d3d3" value="<?php echo $hiperten ?>" />
- hidden
                 <input hidden type="text" id="comboEntidad" name="comboEntidad" style="width: 20%; background-color: #d4d3d3" value="<?php echo $entidadLugar ?>" />
                 <input hidden type="text" id="comboMunicipio" name="comboMunicipio" style="width: 20%; background-color: #d4d3d3" value="<?php echo $municipio ?>" />
                 <input hidden type="text" id="txtCP" name="txtCP" style="width: 20%; background-color: #d4d3d3" value="<?php echo $codigoP ?>" />
