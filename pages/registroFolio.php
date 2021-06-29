@@ -95,6 +95,24 @@
                 <p class="resultadoP">Espere nuestra llamada donde le indicaremos su fecha y lugar de vacunacion</p>
                 <p class="resultadoP">CURP:<input type="text" id="txtCurp" name="txtCurp" style="width: 20%; background-color: #d4d3d3" value="<?php echo $infocurp ?>" /></p>
                 <p>Agregar los input escondidos aqui..</p>
+                <input hidden type="text" id="txtNombre" name="txtNombre" style="width: 20%; background-color: #d4d3d3" value="<?php echo $nombre ?>" />
+                <input hidden type="text" id="txtApellidoP" name="txtApellidoP" style="width: 20%; background-color: #d4d3d3" value="<?php echo $apaterno ?>" />
+                <input hidden type="text" id="txtApellidoM" name="txtApellidoM" style="width: 20%; background-color: #d4d3d3" value="<?php echo $amaterno ?>" />
+                <input hidden type="text" id="txtFechaNac" name="txtFechaNac" style="width: 20%; background-color: #d4d3d3" value="<?php echo $fecNac ?>" />
+                <input hidden type="text" id="txtEntidadNac" name="txtEntidadNac" style="width: 20%; background-color: #d4d3d3" value="<?php echo $entidad ?>" />
+                <input hidden type="text" id="txtSexo" name="txtSexo" style="width: 20%; background-color: #d4d3d3" value="<?php echo $sexo ?>" />
+                <input hidden type="text" id="comboPostracion" name="comboPostracion" style="width: 20%; background-color: #d4d3d3" value="<?php echo $postracion ?>" />
+                <input hidden type="text" id="comboDiabetes" name="comboDiabetes" style="width: 20%; background-color: #d4d3d3" value="<?php echo $diabetes ?>" />
+                <input hidden type="text" id="comboHiperten" name="comboHiperten" style="width: 20%; background-color: #d4d3d3" value="<?php echo $hiperten ?>" />
+ hidden
+                <input hidden type="text" id="comboEntidad" name="comboEntidad" style="width: 20%; background-color: #d4d3d3" value="<?php echo $entidadLugar ?>" />
+                <input hidden type="text" id="comboMunicipio" name="comboMunicipio" style="width: 20%; background-color: #d4d3d3" value="<?php echo $municipio ?>" />
+                <input hidden type="text" id="txtCP" name="txtCP" style="width: 20%; background-color: #d4d3d3" value="<?php echo $codigoP ?>" />
+                <input hidden type="text" id="txtTelefono" name="txtTelefono" style="width: 20%; background-color: #d4d3d3" value="<?php echo $telefono ?>" />
+                <input hidden type="text" id="txtTelefono2" name="txtTelefono2" style="width: 20%; background-color: #d4d3d3" value="<?php echo $telefono2 ?>" />
+                <input hidden type="text" id="txtCorreo" name="txtCorreo" style="width: 20%; background-color: #d4d3d3" value="<?php echo $correo ?>" />
+                <input hidden type="text" id="txtCorreo2" name="txtCorreo2" style="width: 20%; background-color: #d4d3d3" value="<?php echo $correo2 ?>" />
+                <input hidden type="text" id="DomicilioDatos" name="DomicilioDatos" style="width: 20%; background-color: #d4d3d3" value="<?php echo $domDatos ?>" />
             </div>
             <br>
             <div id="textoConfigCurp" >
