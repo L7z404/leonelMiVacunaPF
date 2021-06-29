@@ -22,7 +22,7 @@
     <form method="post" id="formLogin" name="loginForm">
 
         <div class="banner">
-
+            <img src="../images/gmx.png">
         </div>
 
         <div id="container">
