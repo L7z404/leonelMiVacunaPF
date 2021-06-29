@@ -94,6 +94,7 @@
                 <p class="resultadoP">Con el folio:<input type="text" id="txtfolio" name="txtfolio" style="width: 20%; background-color: #d4d3d3" value="<?php echo $folio ?>" /></p>
                 <p class="resultadoP">Espere nuestra llamada donde le indicaremos su fecha y lugar de vacunacion</p>
                 <p class="resultadoP">CURP:<input type="text" id="txtCurp" name="txtCurp" style="width: 20%; background-color: #d4d3d3" value="<?php echo $infocurp ?>" /></p>
+                <p>Agregar los input escondidos aqui..</p>
             </div>
             <br>
             <div id="textoConfigCurp" >
