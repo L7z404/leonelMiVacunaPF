@@ -104,15 +104,15 @@
 
                 <div id="espacioDatos" style="margin-top: 1em"></div>
                 <label for="txtNombre"><strong>Nombre:</strong>
-                    <input type="text" id="txtNombre" placeholder="Primer Nombre" style="width: 15%" />
+                    <input type="text" id="txtNombre" name="txtNombre" placeholder="Primer Nombre" style="width: 15%" />
                 </label>
 
                 <label for="txtApellidoP"><strong>Apellido Paterno:</strong>
-                    <input type="text" id="txtApellidoP" placeholder="Apellido Paterno" style="width: 15%" />
+                    <input type="text" id="txtApellidoP" name="txtApellidoP" placeholder="Apellido Paterno" style="width: 15%" />
                 </label>
 
                 <label for="txtApellidoM"><strong>Apellido Materno:</strong>
-                    <input type="text" id="txtApellidoM" placeholder="Apellido Materno" style="width: 15%" />
+                    <input type="text" id="txtApellidoM" name="txtApellidoM" placeholder="Apellido Materno" style="width: 15%" />
                 </label>
 
                 <br>
@@ -121,7 +121,7 @@
                 </label>
                 &ensp; &ensp; &ensp; &ensp;
                 <label for="txtFechaNac"><strong>Fecha Nacimiento:</strong>
-                    <input type="date" id="txtFechaNac" style="width: 15%" />
+                    <input type="date" id="txtFechaNac" name="txtFechaNac" style="width: 15%" />
                 </label>
 
                 <br>
@@ -150,21 +150,21 @@
                 <label for="comboPostracion"><i>¿Se encuentra en estado de postración?</i></label>
                 <select id="comboPostracion" name="comboPostracion">
                     <option selected disabled>--</option>
-                    <option>Sí</option>
+                    <option>Si</option>
                     <option>No</option>
                 </select>
                 &ensp; &ensp; &ensp; &ensp;
                 <label for="comboDiabetes"><i>¿Padece diabetes?</i></label>
                 <select id="comboDiabetes" name="comboDiabetes" >
                     <option selected disabled>--</option>
-                    <option>Sí</option>
+                    <option>Si</option>
                     <option>No</option>
                 </select>
                 &ensp; &ensp; &ensp; &ensp;
                 <label for="comboHiperten"><i>¿Padece hipertensión?</i></label>
                 <select id="comboHiperten" name="comboHiperten">
                     <option selected disabled>--</option>
-                    <option>Sí</option>
+                    <option>Si</option>
                     <option>No</option>
                 </select>
             </div>
@@ -184,7 +184,7 @@
             <div id="info_a_curp">Lugar en donde voy a vacunarme y datos para localizarme</div>
             <br>
             <label for="comboEntidad"><i>Entidad:</i></label>
-            <select id="comboEntidad" onchange="javascript:getMuni();">
+            <select id="comboEntidad" name="comboEntidad" onchange="javascript:getMuni();">
                 <option selected disabled>--</option>
                 <?php
                 foreach ($rows as $row) {
@@ -196,29 +196,29 @@
             </select>
             &ensp; &ensp; &ensp; &ensp;
             <label for="comboMunicipio"><i>Municipio:</i></label>
-            <select id="comboMunicipio">
+            <select id="comboMunicipio" name="comboMunicipio">
 
             </select>
             &ensp; &ensp; &ensp; &ensp;
             <label for="txtCP"><strong>Código Postal:</strong>
-                <input type="number" id="txtCP" placeholder="ej. 48640, 47760..." style="width: 15%" />
+                <input type="number" id="txtCP" name="txtCP" placeholder="ej. 48640, 47760..." style="width: 15%" />
             </label>
             <br>
 
             <label for="txtTelefono"><strong>Telefono(1):</strong>
-                <input type="text" id="txtTelefono" placeholder="ej. 3751042118" style="width: 10%" />
+                <input type="text" id="txtTelefono" name="txtTelefono" placeholder="ej. 3751042118" style="width: 10%" />
             </label>
 
             <label for="txtTelefono2"><strong>Telefono(2):</strong>
-                <input type="text" id="txtTelefono2" placeholder="ej. 4862153229" style="width: 10%" />
+                <input type="text" id="txtTelefono2" name="txtTelefono2" placeholder="ej. 4862153229" style="width: 10%" />
             </label>
 
             <label for="txtCorreo"><strong>Email:</strong>
-                <input type="email" id="txtCorreo" placeholder="test@test.com" style="width: 15%" />
+                <input type="email" id="txtCorreo" name="txtCorreo" placeholder="test@test.com" style="width: 15%" />
             </label>
 
             <label for="txtCorreo2"><strong>Email Apoyo:</strong>
-                <input type="email" id="txtCorreo2" placeholder="test@test.com" style="width: 15%" />
+                <input type="email" id="txtCorreo2" name="txtCorreo2" placeholder="test@test.com" style="width: 15%" />
             </label>
 
             <br>

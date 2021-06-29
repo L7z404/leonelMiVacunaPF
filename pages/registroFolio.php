@@ -5,9 +5,39 @@
         exit;
     }
 
-    $infocurp = $_POST["txtCurp"];
+    require_once "conn_mysql_leonel.php";
+
     $folio = "fol-" . rand(100000,999999);
 
+    $nombre = $_POST["txtNombre"];
+    $apaterno = $_POST["txtApellidoP"];
+    $amaterno = $_POST["txtApellidoM"];
+    $infocurp = $_POST["txtCurp"];
+    $fecNac = $_POST["txtFechaNac"];
+    $entidad = $_POST["txtEntidadNac"];
+    $sexo = $_POST["txtSexo"];
+    $postracion = $_POST["comboPostracion"];
+    $diabetes = $_POST["comboDiabetes"];
+    $hiperten = $_POST["comboHiperten"];
+
+    $entidadLugar = $_POST["comboEntidad"];
+    $municipio = $_POST["comboMunicipio"];
+    $codigoP = $_POST["txtCP"];
+    $telefono = $_POST["txtTelefono"];
+    $telefono2 = $_POST["txtTelefono2"];
+    $correo = $_POST["txtCorreo"];
+    $correo2 = $_POST["txtCorreo2"];
+    $domDatos = $_POST["DomicilioDatos"];
+
+
+    $sql = "INSERT INTO `datos_persona` (`id`, `nombre`, `apaterno`, `amaterno`, `curp`, `fecNac`, `id_entidad`, 
+                             `sexo`, `postracion`, `diabetes`, `hipertension`, `id_municipio`, `cp`, `telefono`, 
+                             `telefono2`, `email`, `emailap`, `dom_datos`, `folio`) 
+                             VALUES (NULL, '$nombre', '$apaterno', '$amaterno', '$infocurp', '$fecNac', '$entidad', 
+                                     '$sexo', '$postracion', '$diabetes', '$hiperten', '$municipio', '$codigoP', '$telefono', 
+                                     '$telefono2', '$correo', '$correo2', '$domDatos', '$folio')";
+
+    $conn->exec($sql);
 ?>
 
 <!doctype html>
@@ -70,7 +100,8 @@
                 <p>Este aviso NO es una cita para la vacunación, en breve lo contactaremos. La convocatoria a los puntos de vacunación depende de la disponibilidad de las vacunas. <strong>Para facilitar el proceso en el centro de vacunación le sugerimos descargar e imprimir su expediente de vacunación.</strong></p>
             </div>
             <div id="botonesConfigCurp">
-                <a href="reporte_imprimir.php?folio=<?php echo $folio?>&curp=<?php echo $infocurp ?>"><button id="botonExpe" type="button"><strong>Expediente de vacunación</strong></button></a>
+<!--                <a href="reporte_imprimir.php?folio=--><?php //echo $folio?><!--&curp=--><?php //echo $infocurp ?><!--"><button id="botonExpe" type="button"><strong>Expediente de vacunación</strong></button></a>-->
+                <a href="reporte_imprimir.php"><button id="botonExpe" type="button"><strong>Expediente de vacunación</strong></button></a>
                 <br><br>
                 <button id="botonExpes" type="button" onclick="alertandredirect()"><strong>En caso de error, solicitar llamada de aclaración</strong></button>
 
