@@ -30,6 +30,7 @@
     $domDatos = $_POST["DomicilioDatos"];
 
 
+
     $sql = "INSERT INTO `datos_persona` (`id`, `nombre`, `apaterno`, `amaterno`, `curp`, `fecNac`, `id_entidad`, 
                              `sexo`, `postracion`, `diabetes`, `hipertension`, `id_municipio`, `cp`, `telefono`, 
                              `telefono2`, `email`, `emailap`, `dom_datos`, `folio` , `id_entidad_lugar`) 

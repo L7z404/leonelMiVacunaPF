@@ -41,7 +41,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Reporte Vacunación PDF</title>
 </head>
 <body>
@@ -81,9 +81,9 @@
         <table style="width: 100%;" >
             <tbody>
             <tr>
-                <td style="width: 25.0000%;"><?php echo $nombre ?></td>
-                <td style="width: 25.0000%;"><?php echo $apaterno ?></td>
-                <td style="width: 25.0000%;"><?php echo $amaterno ?></td>
+                <td style="width: 25.0000%;"><?php echo ($nombre) ?></td>
+                <td style="width: 25.0000%;"><?php echo ($apaterno) ?></td>
+                <td style="width: 25.0000%;"><?php echo ($amaterno) ?></td>
                 <td style="width: 25.0000%;"><span style="font-size: 10px;"><strong>Sexo:&nbsp;</strong><?php echo $sexo ?></span></td>
             </tr>
             <tr>
@@ -137,8 +137,8 @@
                 <td style="width: 14.2857%;">X</td>
                 <td style="width: 14.2857%;">X</td>
                 <td style="width: 14.2857%;"><?php echo $codigoP ?></td>
-                <td style="width: 14.2857%;"><?php echo $entidadNom ?></td>
-                <td style="width: 14.2857%;"><?php echo $municipioNom ?></td>
+                <td style="width: 14.2857%;"><?php echo ($municipioNom) ?></td>
+                <td style="width: 14.2857%;"><?php echo ($entidadNom) ?></td>
             </tr>
             </tbody>
         </table>
@@ -188,9 +188,9 @@
         <table style="width: 100%;">
             <tbody>
             <tr>
-                <td style="width: 25.0000%;"><?php echo $nombre ?></td>
-                <td style="width: 25.0000%;"><?php echo $apaterno ?></td>
-                <td style="width: 22.1252%;"><?php echo $amaterno ?></td>
+                <td style="width: 25.0000%;"><?php echo ($nombre) ?></td>
+                <td style="width: 25.0000%;"><?php echo ($apaterno) ?></td>
+                <td style="width: 22.1252%;"><?php echo ($amaterno) ?></td>
                 <td style="width: 27.6565%;"><span style="font-size: 10px;"><strong>Sexo:</strong><?php echo $sexo ?></span></td>
             </tr>
             <tr>
