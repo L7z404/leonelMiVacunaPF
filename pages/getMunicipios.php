@@ -7,7 +7,7 @@ $resultado2 = "Ningun municipio disponible";
 
 $municipioSelected = $_POST["municipio_selected"];
 
-$sql2 = "SELECT e.id_municipio, m.municipio FROM entidades e INNER JOIN municipios m 
+$sql2 = "SELECT e.id_municipio, m.municipio, m.id FROM entidades e INNER JOIN municipios m 
            ON e.id_municipio = m.id_municipio WHERE e.id_municipio = '$municipioSelected'";
 
 $result = $conn->query($sql2);
@@ -21,7 +21,7 @@ if (empty($rows)) {
 } else {
     echo $resultado;
     foreach ($rows as $row) {
-        echo '<option value="' . $row['id_municipio'] . '">' . utf8_encode($row['municipio']) . '</option>';
+        echo '<option value="' . $row['id'] . '">' . utf8_encode($row['municipio']) . '</option>';
     }
 }
 ?>

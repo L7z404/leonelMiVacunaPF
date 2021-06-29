@@ -32,10 +32,10 @@
 
     $sql = "INSERT INTO `datos_persona` (`id`, `nombre`, `apaterno`, `amaterno`, `curp`, `fecNac`, `id_entidad`, 
                              `sexo`, `postracion`, `diabetes`, `hipertension`, `id_municipio`, `cp`, `telefono`, 
-                             `telefono2`, `email`, `emailap`, `dom_datos`, `folio`) 
-                             VALUES (NULL, '$nombre', '$apaterno', '$amaterno', '$infocurp', '$fecNac', '$entidad', 
+                             `telefono2`, `email`, `emailap`, `dom_datos`, `folio` , `id_entidad_lugar`) 
+                             VALUES (NULL, '$nombre', '$apaterno', '$amaterno', '$infocurp', '$fecNac', '$entidadLugar', 
                                      '$sexo', '$postracion', '$diabetes', '$hiperten', '$municipio', '$codigoP', '$telefono', 
-                                     '$telefono2', '$correo', '$correo2', '$domDatos', '$folio')";
+                                     '$telefono2', '$correo', '$correo2', '$domDatos', '$folio', '$entidad')";
 
     $conn->exec($sql);
 ?>

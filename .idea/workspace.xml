@@ -7,8 +7,9 @@
     <list default="true" id="add552e9-20d4-4048-9bed-6da15a5d712f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0612f83e-470b-43ea-bc85-ded438d2e504.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0612f83e-470b-43ea-bc85-ded438d2e504.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/confCurp.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/confCurp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/getMunicipios.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/getMunicipios.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/registroFolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/registroFolio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/reporte_imprimir.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/reporte_imprimir.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
