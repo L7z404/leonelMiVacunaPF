@@ -91,9 +91,9 @@
             <br>
             <div id="datosPersonaCurp">
                 <p class="resultadoP">Ud. ha sido registrado exitosamente.</p>
-                <p class="resultadoP">Con el folio: <i class="resultadoI"><strong><?php echo $folio ?></strong></i></p>
+                <p class="resultadoP">Con el folio:<input type="text" id="txtfolio" name="txtfolio" style="width: 20%; background-color: #d4d3d3" value="<?php echo $folio ?>" /></p>
                 <p class="resultadoP">Espere nuestra llamada donde le indicaremos su fecha y lugar de vacunacion</p>
-                <p class="resultadoP">CURP: <i class="resultadoI"><strong><?php echo $infocurp ?></strong></i></p>
+                <p class="resultadoP">CURP:<input type="text" id="txtCurp" name="txtCurp" style="width: 20%; background-color: #d4d3d3" value="<?php echo $infocurp ?>" /></p>
             </div>
             <br>
             <div id="textoConfigCurp" >
@@ -101,7 +101,7 @@
             </div>
             <div id="botonesConfigCurp">
 <!--                <a href="reporte_imprimir.php?folio=--><?php //echo $folio?><!--&curp=--><?php //echo $infocurp ?><!--"><button id="botonExpe" type="button"><strong>Expediente de vacunación</strong></button></a>-->
-                <a href="reporte_imprimir.php"><button id="botonExpe" type="button"><strong>Expediente de vacunación</strong></button></a>
+                <button id="botonExpe" type="submit"><strong>Expediente de vacunación</strong></button>
                 <br><br>
                 <button id="botonExpes" type="button" onclick="alertandredirect()"><strong>En caso de error, solicitar llamada de aclaración</strong></button>
 

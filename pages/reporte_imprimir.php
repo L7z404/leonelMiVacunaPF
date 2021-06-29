@@ -6,8 +6,8 @@
         exit;
     }
 
-    $folio = $_GET['folio'];
-    $curp = $_GET['curp'];
+    $folio = $_POST["txtfolio"];
+    $curp = $_POST["txtCurp"];
 
     ob_start();
     ?>
