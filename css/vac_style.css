@@ -146,6 +146,14 @@ button {
      background: #033027;
  }
 
+#cerrars{
+    width: 200px;
+    background: #9e2141;
+    color: #FFF;
+}#cerrars:hover{
+     background: #7c132f;
+ }
+
 
  /*todo lo de abajo footer*/
 #raya_baja_footer{

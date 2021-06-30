@@ -32,11 +32,11 @@
                 </div>
 
                 <div class="item">
-                    <button class="buttonb" type="button"><a target="_blank" href="inicio.php" style="color: inherit; text-decoration: none"><strong>Nuevo Registro</strong></a></button>
+                    <button class="buttonb" type="button"><a href="inicio.php" style="color: inherit; text-decoration: none"><strong>Nuevo Registro</strong></a></button>
                 </div>
 
                 <div class="item">
-                    <button class="buttonb" type="button"><a target="_blank" href="#" style="color: inherit; text-decoration: none"><strong>Administrar Registros</strong></a></button>
+                    <button class="buttonb" type="button"><a href="adminreg.php" style="color: inherit; text-decoration: none"><strong>Administrar Registros</strong></a></button>
                 </div>
 
             </div>

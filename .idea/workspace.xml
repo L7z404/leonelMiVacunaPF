@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="add552e9-20d4-4048-9bed-6da15a5d712f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/adminreg.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/regentidades.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/regmunicipios.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/regpersonas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/regusuarios.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/registroFolio.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/registroFolio.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/reporte_imprimir.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/reporte_imprimir.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/vac_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/vac_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/menu.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +114,8 @@
       <workItem from="1624815427114" duration="16343000" />
       <workItem from="1624845327512" duration="492000" />
       <workItem from="1624927701105" duration="4627000" />
-      <workItem from="1624979754947" duration="15821000" />
+      <workItem from="1624979754947" duration="17046000" />
+      <workItem from="1625028274299" duration="1111000" />
     </task>
     <servers />
   </component>
