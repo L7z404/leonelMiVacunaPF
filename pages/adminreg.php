@@ -19,22 +19,24 @@
     <div id="centro_cabeza">
         <div id="imgDiv"></div>
     </div>
-    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0"></div>
+    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Administración de Datos</div>
     <div id="raya_baja_cabeza"></div>
 </div>
 <br><br><br>
+<div style="text-align: center; font-family: 'Comic Sans MS', serif; font-size: 30px;">Seleccione una tabla</div>
+<br><br><br>
 <div id="botones_abajo_index">
-    <button id="bregmivac" type="button"><a style="text-decoration: none; color: #fff" href="regpersonas.php">Registros Personas</a></button>
+    <a style="text-decoration: none; color: #fff" href="regpersonas.php"><button id="bregmivac" type="button">Registros Personas</button></a>
     &ensp;&ensp;
-    <button id="bnoconoce" type="button"><a style="text-decoration: none; color: #fff" href="regentidades.php">Entidades</a></button>
+    <a style="text-decoration: none; color: #fff" href="regentidades.php"><button id="bnoconoce" type="button">Entidades</button></a>
     &ensp;&ensp;
-    <button id="baviso" type="button"><a style="text-decoration: none; color: #fff" href="regmunicipios.php">Municipios</a></button>
+    <a style="text-decoration: none; color: #fff" href="regmunicipios.php"><button id="baviso" type="button">Municipios</button></a>
     &ensp;&ensp;
-    <button id="infodosis" type="button"><a style="text-decoration: none; color: #fff" href="regusuarios.php">Usuarios</a></button>
+    <a style="text-decoration: none; color: #fff" href="regusuarios.php"><button id="infodosis" type="button">Usuarios</button></a>
 
 </div>
-<br><br><br>
-<footer style="text-align: center">
+<br><br><br><br><br><br>
+<footer style="text-align: center; position: sticky">
     <button id="cerrars" type="button"><a style="text-decoration: none; color: #fff" href="../index.php">Cerrar Sesión</a></button>
 </footer>
 </body>

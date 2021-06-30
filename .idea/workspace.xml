@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="add552e9-20d4-4048-9bed-6da15a5d712f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/adminreg.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/regentidades.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/regmunicipios.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/regpersonas.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/regusuarios.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/vac_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/vac_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/adminreg.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/adminreg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/regentidades.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/regentidades.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/regmunicipios.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/regmunicipios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/regpersonas.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/regpersonas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/regusuarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/regusuarios.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../no_adeudo" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
