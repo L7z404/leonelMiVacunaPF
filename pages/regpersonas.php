@@ -7,7 +7,7 @@
 
     require_once "conn_mysql_leonel.php";
 
-    $sql = 'SELECT d.id, d.nombre, d.apaterno, d.amaterno, d.curp, d.fecNac, d.sexo, d.postracion, d.diabetes, d.hipertension, d.cp, d.telefono, d.telefono2, d.email, d.emailap, d.dom_datos, d.folio, e.entidad, m.municipio FROM datos_persona d INNER JOIN entidades e ON d.id_entidad_lugar = e.id_entidad INNER JOIN municipios m ON d.id_municipio = m.id';
+    $sql = 'SELECT d.id, d.nombre, d.apaterno, d.amaterno, d.curp, d.fecNac, d.sexo, d.postracion, d.diabetes, d.hipertension, d.cp, d.telefono, d.telefono2, d.email, d.emailap, d.dom_datos, d.folio, e.entidad, m.municipio FROM datos_persona d INNER JOIN entidades e ON d.id_entidad = e.id_entidad INNER JOIN municipios m ON d.id_municipio = m.id';
     $stmt = $conn->query($sql);
     $rows = $stmt->fetchAll();
 

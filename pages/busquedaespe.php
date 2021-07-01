@@ -7,7 +7,9 @@ if ($_SESSION["validado"]!="true"){
 
 require_once "conn_mysql_leonel.php";
 
-
+$sql = 'SELECT * FROM entidades';
+$stmt = $conn->query($sql);
+$rows = $stmt->fetchAll();
 
 ?>
 <!doctype html>
@@ -28,14 +30,72 @@ require_once "conn_mysql_leonel.php";
         }
         th{
             background-color: #BC955C;
-            font-size: 25px;
+            font-size: 15px;
             color: white;
         }
         td{
             background-color: #DFCBA7;
-            font-size: 18px;
+            font-size: 13px;
         }
     </style>
+    <script language="JavaScript" type="text/javascript">
+        function create_object_XMLHttpRequest() {
+            try {
+                objeto = new XMLHttpRequest();
+            } catch (err1) {
+                try {
+                    objeto = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (err2) {
+                    try {
+                        objeto = new ActiveXObject("Microsoft.XMLHTTP");
+                    } catch (err3) {
+                        objeto = false;
+                    }
+                }
+            }
+            return objeto;
+        }
+
+        var objeto_AJAX = create_object_XMLHttpRequest();
+
+        function getMuni() {
+            var URL = "getMunicipios.php";
+            objeto_AJAX.open("POST", URL, true);
+            objeto_AJAX.onreadystatechange = muestraResultado;
+            objeto_AJAX.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            objeto_AJAX.send("municipio_selected=" + document.getElementById("comboEntidad").value);
+        }
+
+        function muestraResultado() {
+            if (objeto_AJAX.readyState == 4 && objeto_AJAX.status == 200) {
+                document.getElementById("comboMunicipio").innerHTML = objeto_AJAX.responseText;
+            }
+        }
+    </script>
+
+    <script language="JavaScript" type="text/javascript">
+
+        function mostrarEnti(str) {
+            if (str === 0) {
+                document.getElementById("datosPer").innerHTML = "";
+                return false;
+            } else {
+                if (window.XMLHttpRequest) {
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        document.getElementById("datosPer").innerHTML = xmlhttp.responseText;
+                    }
+                };
+                xmlhttp.open("GET","getPersonas.php?q="+str,true);
+                xmlhttp.send();
+            }
+        }
+
+    </script>
 </head>
 <body>
 <div id="all_cabeza">
@@ -60,28 +120,31 @@ require_once "conn_mysql_leonel.php";
 </div>
 <br><br>
 <div style="text-align: center"><a style="text-decoration: none; color: #fff;" href="#"><button id="busqespe" type="button">✔️Busqueda Especifica por Entidad y Municipios✔️</button></a></div>
-<br>
+<br><br>
+
 <div style="text-align: center">
-    <table style="margin: 0 auto;" border="1">
-        <thead>
-            <th>&ensp;Estado&ensp;</th>
-            <th>&ensp;Municipio&ensp;</th>
-            <th>&ensp;Nombre&ensp;</th>
-            <th>-</th>
-            <th>-</th>
-        </thead>
 
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>&ensp;<a href="#" style="text-decoration: none">Editar</a>&ensp;</td>
-                <td>&ensp;<a href="#" style="text-decoration: none">Borrar</a>&ensp;</td>
-            </tr>
-
-    </table>
+    <label for="comboEntidad"><i>Entidad:</i></label>
+    <select id="comboEntidad" name="comboEntidad" onchange="javascript:getMuni();">
+        <option selected disabled>---Selecciona una Entidad---</option>
+        <?php
+        foreach ($rows as $row) {
+            echo '<option value="' .
+                $row['id_entidad'] . '">' .
+                $row['entidad'] . '</option>';
+        }
+        ?>
+    </select>
+    &ensp;&ensp;&ensp;&ensp;
+    <label for="comboMunicipio"><i>Municipio:</i></label>
+    <select id="comboMunicipio" name="comboMunicipio" onChange="mostrarEnti(this.value);"></select>
+</div>
+<br><br>
+<div id="datosPer">
 </div>
 <br><br><br><br><br><br>
+
+</body>
 <footer style="text-align: center">
 
     <button id="cerrars" type="button"><a style="text-decoration: none; color: #fff" href="login.php">Cerrar Sesión</a></button>
@@ -95,5 +158,4 @@ require_once "conn_mysql_leonel.php";
     </div>
     <div id="raya_baja_ultima_footer"></div>
 </footer>
-</body>
 </html>
