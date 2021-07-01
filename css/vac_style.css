@@ -154,6 +154,22 @@ button {
      background: #7c132f;
  }
 
+#inis{
+    width: 130px;
+    background: #87878f;
+    color: #FFF;
+}#inis:hover{
+     background: #6f6f73;
+ }
+
+#busqespe{
+    width: 400px;
+    background: #bc955c;
+    color: #FFF;
+}#busqespe:hover{
+     background: #8f6d3b;
+ }
+
 
  /*todo lo de abajo footer*/
 #raya_baja_footer{

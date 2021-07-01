@@ -1,9 +1,4 @@
 <?php
-    session_start();
-    if ($_SESSION["validado"]!="true"){
-        header("Location: ../index.php");
-        exit;
-    }
 
     require_once "conn_mysql_leonel.php";
 

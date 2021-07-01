@@ -1,13 +1,13 @@
 <?php
     session_start();
     if ($_SESSION["validado"]!="true"){
-        header("Location: ../index.php");
+        header("Location: ../login.php");
         exit;
     }
 
     require_once "conn_mysql_leonel.php";
 
-    $sql = 'SELECT * FROM datos_persona';
+    $sql = 'SELECT d.id, d.nombre, d.apaterno, d.amaterno, d.curp, d.fecNac, d.sexo, d.postracion, d.diabetes, d.hipertension, d.cp, d.telefono, d.telefono2, d.email, d.emailap, d.dom_datos, d.folio, e.entidad, m.municipio FROM datos_persona d INNER JOIN entidades e ON d.id_entidad_lugar = e.id_entidad INNER JOIN municipios m ON d.id_municipio = m.id';
     $stmt = $conn->query($sql);
     $rows = $stmt->fetchAll();
 
@@ -60,7 +60,9 @@
     <a style="text-decoration: none; color: #fff" href="regusuarios.php"><button id="infodosis" type="button">Usuarios</button></a>
 
 </div>
-<br><br><br>
+<br><br>
+<div style="text-align: center"><a style="text-decoration: none; color: #fff;" href="busquedaespe.php"><button id="busqespe" type="button">Busqueda Especifica por Entidad y Municipios</button></a></div>
+<br>
 <div style="text-align: center">
     <table style="margin: 0 auto;" border="1">
         <thead>
@@ -70,12 +72,12 @@
             <th>Apellido 2</th>
             <th>CURP</th>
             <th>Fecha Nac</th>
-            <th>ID_Entidad</th>
             <th>Sexo</th>
             <th>Postración</th>
             <th>Diabetes</th>
             <th>Hiptertension</th>
-            <th>ID_Municipio</th>
+            <th>Entidad de vacunación</th>
+            <th>Municipio de vacunación</th>
             <th>CP</th>
             <th>Telefono</th>
             <th>Telefono 2</th>
@@ -87,37 +89,47 @@
         </thead>
         <?php foreach ($rows as $row){ ?>
         <tr>
-            <td>&ensp;<?php echo ($row['id']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['nombre']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['apaterno']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['amaterno']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['curp']) ?>&ensp;</td>
-            <td>&ensp;<?php
+            <td><?php echo ($row['id']) ?></td>
+            <td><?php echo ($row['nombre']) ?></td>
+            <td><?php echo ($row['apaterno']) ?></td>
+            <td><?php echo ($row['amaterno']) ?></td>
+            <td><?php echo ($row['curp']) ?></td>
+            <td><?php
                 $fechaNac = $row['fecNac'];
                 $fechaNacFormat = date("d-m-Y", strtotime($fechaNac));
                 echo ($fechaNacFormat)
-                ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['id_entidad']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['sexo']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['postracion']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['diabetes']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['hipertension']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['id_municipio']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['cp']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['telefono']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['telefono2']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['email']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['emailap']) ?>&ensp;</td>
-            <td>&ensp;<?php echo ($row['dom_datos']) ?>&ensp;</td>
-            <td><a href="#" style="text-decoration: none">&ensp;Editar&ensp;</a></td>
-            <td><a href="#" style="text-decoration: none">&ensp;Borrar&ensp;</a></td>
+                ?></td>
+            <td><?php echo ($row['sexo']) ?></td>
+            <td><?php echo ($row['postracion']) ?></td>
+            <td><?php echo ($row['diabetes']) ?></td>
+            <td><?php echo ($row['hipertension']) ?></td>
+            <td><?php echo ($row['entidad']) ?></td>
+            <td><?php echo ($row['municipio']) ?></td>
+            <td><?php echo ($row['cp']) ?></td>
+            <td><?php echo ($row['telefono']) ?></td>
+            <td><?php echo ($row['telefono2']) ?></td>
+            <td><?php echo ($row['email']) ?></td>
+            <td><?php echo ($row['emailap']) ?></td>
+            <td><?php echo ($row['dom_datos']) ?></td>
+            <td><a href="#" style="text-decoration: none">Editar</a></td>
+            <td><a href="#" style="text-decoration: none">Borrar</a></td>
         </tr>
         <?php } ?>
     </table>
 </div>
 <br><br><br><br><br><br>
-<footer style="text-align: center; position: sticky">
-    <button id="cerrars" type="button"><a style="text-decoration: none; color: #fff" href="../index.php">Cerrar Sesión</a></button>
+<footer style="text-align: center">
+
+    <button id="cerrars" type="button"><a style="text-decoration: none; color: #fff" href="login.php">Cerrar Sesión</a></button>
+    <br><br><br><br>
+    <div id="raya_baja_footer">
+        <p style="color: #fff; text-align: center; font-family: 'Comic Sans MS',serif">El horario de operación es continuo de lunes a domingo.</p>
+    </div>
+    <br>
+    <div id="texto_abajo_footer">
+        <p style="text-align: center; color: grey; font-family: 'Comic Sans MS',serif; font-size: 14px">La aplicación de la Política Nacional de Vacunación es de carácter público, ajena a cualquier partido político. Queda prohibido su uso para fines distintos a los establecidos.</p>
+    </div>
+    <div id="raya_baja_ultima_footer"></div>
 </footer>
 </body>
 </html>

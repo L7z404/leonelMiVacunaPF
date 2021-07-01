@@ -1,11 +1,5 @@
 <?php
 
-    session_start();
-    if ($_SESSION["validado"]!="true"){
-        header("Location: ../index.php");
-        exit;
-    }
-
     $folio = $_POST["txtfolio"];
     $curp = $_POST["txtCurp"];
 
@@ -123,22 +117,18 @@
         <table style="width: 100%;" border="1">
             <tbody>
             <tr>
-                <td style="width: 14.2857%;"><strong><span style="font-size: 12px;">Calle</span></strong></td>
-                <td style="width: 14.2857%;"><span style="font-size: 12px;"><strong>N. Exterior</strong></span></td>
-                <td style="width: 14.2857%;"><span style="font-size: 12px;"><strong>N. Interior</strong></span></td>
-                <td style="width: 14.2857%;"><span style="font-size: 12px;"><strong>Colonia</strong></span></td>
+                <td style="width: 57.1428%;"><strong><span style="font-size: 12px;">Domicilo/Datos Adicionales</span></strong></td>
+
                 <td style="width: 14.2857%;"><strong><span style="font-size: 12px;">C.P.</span></strong></td>
                 <td style="width: 14.2857%;"><span style="font-size: 12px;"><strong>Municipio</strong></span></td>
                 <td style="width: 14.2857%;"><span style="font-size: 12px;"><strong>Estado</strong></span></td>
             </tr>
             <tr>
-                <td style="width: 14.2857%;">X</td>
-                <td style="width: 14.2857%;">X</td>
-                <td style="width: 14.2857%;">X</td>
-                <td style="width: 14.2857%;">X</td>
-                <td style="width: 14.2857%;"><?php echo $codigoP ?></td>
+                <td style="width: 57.1428%;"><?php echo ($domDatos) ?></td>
+
+                <td style="width: 14.2857%;"><?php echo ($codigoP) ?></td>
                 <td style="width: 14.2857%;"><?php echo ($municipioNom) ?></td>
-                <td style="width: 14.2857%;"><?php echo ($entidadNom) ?></td>
+                <td style="width: 14.2857%; font-size: 11px"><?php echo ($entidadNom) ?></td>
             </tr>
             </tbody>
         </table>
@@ -147,9 +137,9 @@
             <tbody>
             <tr>
                 <td style="width: 20.0000%; background-color: #223634; color: white"><strong><span style="font-size: 12px;">PADECIMIENTOS</span></strong></td>
-                <td style="width: 20.0000%;"><span style="font-size: 12px;"><strong>Diabetes:</strong><?php echo $diabetes ?></span></td>
-                <td style="width: 20.0000%;"><span style="font-size: 12px;"><strong>Hipertension:</strong><?php echo $hiperten ?></span></td>
-                <td style="width: 20.0000%;"><span style="font-size: 12px;"><strong>Embarazo:</strong>X</span></td>
+                <td style="width: 20.0000%;"><span style="font-size: 12px;"><strong>Diabetes: </strong><?php echo $diabetes ?></span></td>
+                <td style="width: 20.0000%;"><span style="font-size: 12px;"><strong>Hipertension: </strong><?php echo $hiperten ?></span></td>
+                <td style="width: 20.0000%;"><span style="font-size: 12px;"><strong>Postración: </strong><?php echo $postracion ?></span></td>
                 <td style="width: 20.0000%;"><strong><span style="font-size: 12px;">Otra (opcional): X</span></strong></td>
             </tr>
             </tbody>
@@ -191,13 +181,13 @@
                 <td style="width: 25.0000%;"><?php echo ($nombre) ?></td>
                 <td style="width: 25.0000%;"><?php echo ($apaterno) ?></td>
                 <td style="width: 22.1252%;"><?php echo ($amaterno) ?></td>
-                <td style="width: 27.6565%;"><span style="font-size: 10px;"><strong>Sexo:</strong><?php echo $sexo ?></span></td>
+                <td style="width: 27.6565%;"><span style="font-size: 10px;"><strong>Sexo: </strong><?php echo $sexo ?></span></td>
             </tr>
             <tr>
                 <td style="width: 25.0000%;"><span style="font-size: 10px;"><strong>NOMBRES(S)</strong></span><br></td>
                 <td style="width: 25.0000%;"><span style="font-size: 10px;"><strong>APELLIDO 1</strong></span><br></td>
                 <td style="width: 22.1252%;"><span style="font-size: 10px;"><strong>APELLIDO 2</strong></span><br></td>
-                <td style="width: 27.6565%;"><span style="font-size: 10px;"><strong>Fecha Nacimiento</strong><?php echo $fecNac ?></span><strong>&nbsp;</strong><br></td>
+                <td style="width: 27.6565%;"><span style="font-size: 10px;"><strong>Fecha Nacimiento: </strong><?php echo $fecNac ?></span><strong>&nbsp;</strong><br></td>
             </tr>
             </tbody>
         </table>

@@ -7,9 +7,7 @@ if ($_SESSION["validado"]!="true"){
 
 require_once "conn_mysql_leonel.php";
 
-$sql = 'SELECT e.id_entidad, e.entidad, m.municipio FROM entidades e INNER JOIN municipios m on e.id_municipio = m.id_municipio';
-$stmt = $conn->query($sql);
-$rows = $stmt->fetchAll();
+
 
 ?>
 <!doctype html>
@@ -23,19 +21,19 @@ $rows = $stmt->fetchAll();
     <link rel="stylesheet" href="../css/vac_style.css" type="text/css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="../javascript/validaciones.js"></script>
-    <title>Registros Entidades</title>
+    <title>Busqueda Especifica</title>
     <style>
         table{
             border: 5px #9E7E4F;
         }
         th{
             background-color: #BC955C;
-            font-size: 20px;
+            font-size: 25px;
             color: white;
         }
         td{
             background-color: #DFCBA7;
-            font-size: 16px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -45,7 +43,7 @@ $rows = $stmt->fetchAll();
     <div id="centro_cabeza">
         <div id="imgDiv"></div>
     </div>
-    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Administración de Datos de Entidades</div>
+    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Administración de Datos de Usuarios</div>
     <div id="raya_baja_cabeza"></div>
 </div>
 <br><br><br>
@@ -53,7 +51,7 @@ $rows = $stmt->fetchAll();
 <div id="botones_abajo_index">
     <a style="text-decoration: none; color: #fff" href="regpersonas.php"><button id="bregmivac" type="button">Registros Personas</button></a>
     &ensp;&ensp;
-    <a style="text-decoration: none; color: #fff" href="#"><button id="bnoconoce" type="button">✔️Entidades✔️</button></a>
+    <a style="text-decoration: none; color: #fff" href="regentidades.php"><button id="bnoconoce" type="button">Entidades</button></a>
     &ensp;&ensp;
     <a style="text-decoration: none; color: #fff" href="regmunicipios.php"><button id="baviso" type="button">Municipios</button></a>
     &ensp;&ensp;
@@ -61,25 +59,26 @@ $rows = $stmt->fetchAll();
 
 </div>
 <br><br>
-
+<div style="text-align: center"><a style="text-decoration: none; color: #fff;" href="#"><button id="busqespe" type="button">✔️Busqueda Especifica por Entidad y Municipios✔️</button></a></div>
+<br>
 <div style="text-align: center">
     <table style="margin: 0 auto;" border="1">
         <thead>
-        <th>ID</th>
-        <th>Entidad</th>
-        <th>Municipio Relacionado</th>
-        <th>-</th>
-        <th>-</th>
+            <th>&ensp;Estado&ensp;</th>
+            <th>&ensp;Municipio&ensp;</th>
+            <th>&ensp;Nombre&ensp;</th>
+            <th>-</th>
+            <th>-</th>
         </thead>
-        <?php foreach ($rows as $row){ ?>
+
             <tr>
-                <td>&ensp;<?php echo ($row['id_entidad']) ?>&ensp;</td>
-                <td>&ensp;<?php echo ($row['entidad']) ?>&ensp;</td>
-                <td>&ensp;<?php echo ($row['municipio']) ?>&ensp;</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td>&ensp;<a href="#" style="text-decoration: none">Editar</a>&ensp;</td>
                 <td>&ensp;<a href="#" style="text-decoration: none">Borrar</a>&ensp;</td>
             </tr>
-        <?php } ?>
+
     </table>
 </div>
 <br><br><br><br><br><br>

@@ -1,7 +1,7 @@
 <?php
     session_start();
     if ($_SESSION["validado"]!="true"){
-        header("Location: ../index.php");
+        header("Location: ../login.php");
         exit;
     }
 ?>
@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="item">
-                    <button class="buttonb" type="button"><a href="inicio.php" style="color: inherit; text-decoration: none"><strong>Nuevo Registro</strong></a></button>
+                    <button class="buttonb" type="button"><a href="../index.php" style="color: inherit; text-decoration: none"><strong>Nuevo Registro</strong></a></button>
                 </div>
 
                 <div class="item">
@@ -45,7 +45,7 @@
         &ensp;
 
         <div class="btn-block">
-            <a href="../index.php"><button type="button">Cerrar Sesión</button></a>
+            <a href="login.php"><button type="button">Cerrar Sesión</button></a>
         </div>
     </form>
 </div>
