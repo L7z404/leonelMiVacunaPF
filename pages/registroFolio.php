@@ -62,7 +62,7 @@
 
         function alertandredirect(){
             alert("Sera llamado al numero de telefono propocionado. Regresando a inicio.");
-            window.location.href = "inicio.php";
+            window.location.href = "../index.php";
         }
     </script>
 </head>
