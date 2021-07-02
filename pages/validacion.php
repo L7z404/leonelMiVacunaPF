@@ -18,6 +18,6 @@
         exit;
     }else{
         $conn = null;
-        header("Location: ../login.php");
+        header("Location: login.php");
         exit;
     }

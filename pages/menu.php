@@ -1,7 +1,7 @@
 <?php
     session_start();
     if ($_SESSION["validado"]!="true"){
-        header("Location: ../login.php");
+        header("Location: login.php");
         exit;
     }
 ?>
@@ -32,11 +32,11 @@
                 </div>
 
                 <div class="item">
-                    <button class="buttonb" type="button"><a href="../index.php" style="color: inherit; text-decoration: none"><strong>Nuevo Registro</strong></a></button>
+                    <a href="../index.php" style="color: inherit; text-decoration: none"><button class="buttonb" type="button"><strong>Nuevo Registro</strong></button></a>
                 </div>
 
                 <div class="item">
-                    <button class="buttonb" type="button"><a href="adminreg.php" style="color: inherit; text-decoration: none"><strong>Administrar Registros</strong></a></button>
+                    <a href="adminreg.php" style="color: inherit; text-decoration: none"><button class="buttonb" type="button"><strong>Administrar Registros</strong></button></a>
                 </div>
 
             </div>

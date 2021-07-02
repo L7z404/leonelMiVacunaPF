@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION["validado"]!="true"){
-    header("Location: ../login.php");
+    header("Location: login.php");
     exit;
 }
 
@@ -78,7 +78,9 @@ $rows = $stmt->fetchAll();
                 <td><?php echo ($row['usuario']) ?></td>
                 <td><?php echo ($row['clave']) ?></td>
                 <td><?php echo ($row['tipousuario']) ?></td>
-                <td>&ensp;<a href="#" style="text-decoration: none">Editar</a>&ensp;</td>
+                <td>&ensp;<a onclick="return AlertaEditar(<?php echo $row['id_usuario'] ?>)"
+                             href="editarusuarios.php?id=<?php echo $row['id_usuario'] ?>"
+                             style="text-decoration: none">Editar</a>&ensp;</td>
                 <td>&ensp;<a href="#" style="text-decoration: none">Borrar</a>&ensp;</td>
             </tr>
         <?php } ?>

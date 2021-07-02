@@ -189,3 +189,11 @@ function ValidaFormLogin(){
         document.loginForm.submit();
     }
 }
+
+function AlertaEditar(dato) {
+    if (confirm("¿Estás seguro de editar el elemento No: " + dato + "?") == true) {
+        return true;
+    } else {
+        return false;
+    }
+}
