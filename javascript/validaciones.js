@@ -197,3 +197,11 @@ function AlertaEditar(dato) {
         return false;
     }
 }
+
+function AlertaBorrar(dato) {
+    if (confirm("¿Estás seguro de borrar el elemento No: " + dato + "?") == true) {
+        return true;
+    } else {
+        return false;
+    }
+}

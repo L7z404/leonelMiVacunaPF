@@ -1,17 +1,23 @@
 <?php
-session_start();
-if ($_SESSION["validado"]!="true"){
-    header("Location: login.php");
-    exit;
-}
+    session_start();
+    if ($_SESSION["validado"]!="true"){
+        header("Location: login.php");
+        exit;
+    }
 
-require_once "conn_mysql_leonel.php";
+    require_once "conn_mysql_leonel.php";
 
-$sql = 'SELECT * FROM usuarios';
-$stmt = $conn->query($sql);
-$rows = $stmt->fetchAll();
+    $id = $_GET['id'];
+    $id = (int)$id;
 
+    $sql = "SELECT * FROM usuarios WHERE id_usuario='$id'";
+    $stmt = $conn->query($sql);
+    $rows = $stmt->fetchAll();
+
+    $sqlBorrar = "DELETE FROM usuarios WHERE id_usuario='$id'";
+    $conn->exec($sqlBorrar);
 ?>
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -23,7 +29,7 @@ $rows = $stmt->fetchAll();
     <link rel="stylesheet" href="../css/vac_style.css" type="text/css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="../javascript/validaciones.js"></script>
-    <title>Registros Usuarios</title>
+    <title>Usuario Borrado</title>
     <style>
         table{
             border: 5px #9E7E4F;
@@ -45,7 +51,7 @@ $rows = $stmt->fetchAll();
     <div id="centro_cabeza">
         <div id="imgDiv"></div>
     </div>
-    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Administración de Datos de Usuarios</div>
+    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Borrado de Datos de Usuarios</div>
     <div id="raya_baja_cabeza"></div>
 </div>
 <br><br><br>
@@ -57,20 +63,19 @@ $rows = $stmt->fetchAll();
     &ensp;&ensp;
     <a style="text-decoration: none; color: #fff" href="regmunicipios.php"><button id="baviso" type="button">Municipios</button></a>
     &ensp;&ensp;
-    <a style="text-decoration: none; color: #fff" href="#"><button id="infodosis" type="button">✔️Usuarios✔️</button></a>
+    <a style="text-decoration: none; color: #fff" href="regusuarios.php"><button id="infodosis" type="button">✔️Usuarios✔️</button></a>
 
 </div>
 <br><br>
 
 <div style="text-align: center">
+    <h1>Usuario Borrado</h1>
     <table style="margin: 0 auto;" border="1">
         <thead>
         <th>ID</th>
         <th>Usuario</th>
         <th>Clave</th>
         <th>Tipo Usuario</th>
-        <th>-</th>
-        <th>-</th>
         </thead>
         <?php foreach ($rows as $row){ ?>
             <tr>
@@ -78,12 +83,6 @@ $rows = $stmt->fetchAll();
                 <td><?php echo ($row['usuario']) ?></td>
                 <td><?php echo ($row['clave']) ?></td>
                 <td><?php echo ($row['tipousuario']) ?></td>
-                <td>&ensp;<a onclick="return AlertaEditar(<?php echo $row['id_usuario'] ?>)"
-                             href="editarusuarios.php?id=<?php echo $row['id_usuario'] ?>"
-                             style="text-decoration: none">Editar</a>&ensp;</td>
-                <td>&ensp;<a onclick="AlertaBorrar(<?php echo $row['id_usuario'] ?>)"
-                             href="borraruser.php?id=<?php echo $row['id_usuario'] ?>"
-                             style="text-decoration: none">Borrar</a>&ensp;</td>
             </tr>
         <?php } ?>
     </table>
@@ -104,3 +103,4 @@ $rows = $stmt->fetchAll();
 </footer>
 </body>
 </html>
+
