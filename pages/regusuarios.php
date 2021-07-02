@@ -81,7 +81,7 @@ $rows = $stmt->fetchAll();
                 <td>&ensp;<a onclick="return AlertaEditar(<?php echo $row['id_usuario'] ?>)"
                              href="editarusuarios.php?id=<?php echo $row['id_usuario'] ?>"
                              style="text-decoration: none">Editar</a>&ensp;</td>
-                <td>&ensp;<a onclick="AlertaBorrar(<?php echo $row['id_usuario'] ?>)"
+                <td>&ensp;<a onclick="return AlertaBorrar(<?php echo $row['id_usuario'] ?>)"
                              href="borraruser.php?id=<?php echo $row['id_usuario'] ?>"
                              style="text-decoration: none">Borrar</a>&ensp;</td>
             </tr>

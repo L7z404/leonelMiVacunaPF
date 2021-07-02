@@ -1,25 +1,18 @@
 <?php
-    session_start();
-    if ($_SESSION["validado"]!="true"){
-        header("Location: login.php");
-        exit;
-    }
+session_start();
+if ($_SESSION["validado"]!="true"){
+    header("Location: login.php");
+    exit;
+}
 
-    require_once "conn_mysql_leonel.php";
+require_once "conn_mysql_leonel.php";
 
-    $id = $_POST['txtid'];
-    $id = (int)$id;
-    $user = $_POST['txtusuario'];
-    $clave = $_POST['txtclave'];
-    $tipo = $_POST['txttu'];
+$id = $_GET['id'];
 
+$sql = "SELECT m.id, m.municipio, e.entidad FROM municipios m INNER JOIN entidades e on m.id_municipio = e.id_municipio WHERE m.id ='$id'";
+$stmt = $conn->query($sql);
+$rows = $stmt->fetchAll();
 
-    $sqlUpdate = "UPDATE usuarios SET usuario = '$user', clave='$clave', tipousuario='$tipo' WHERE id_usuario = '$id'";
-    $conn->exec($sqlUpdate);
-
-    $sql = "SELECT * FROM usuarios WHERE id_usuario='$id'";
-    $stmt = $conn->query($sql);
-    $rows = $stmt->fetchAll();
 ?>
 <!doctype html>
 <html lang="es">
@@ -32,19 +25,32 @@
     <link rel="stylesheet" href="../css/vac_style.css" type="text/css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="../javascript/validaciones.js"></script>
-    <title>Usuario Actualizado</title>
+    <title>Editar Municipios</title>
+    <script language="JavaScript" type="text/javascript">
+        function validaMunicipio(){
+            var municipio = document.getElementById("txtmuni").value;
+
+            if(municipio == null || municipio.length === 0 || /^\s+$/.test(municipio) || municipio.length > 55){
+                alert("Debes escribir un municipio válido.");
+                document.getElementById("txtmuni").focus();
+                return false;
+            } else{
+                document.muniform.submit();
+            }
+        }
+    </script>
     <style>
         table{
             border: 5px #9E7E4F;
         }
         th{
             background-color: #BC955C;
-            font-size: 25px;
+            font-size: 20px;
             color: white;
         }
         td{
             background-color: #DFCBA7;
-            font-size: 18px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -54,7 +60,7 @@
     <div id="centro_cabeza">
         <div id="imgDiv"></div>
     </div>
-    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Edición de Datos de Usuarios</div>
+    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Edición de Datos de Municipios</div>
     <div id="raya_baja_cabeza"></div>
 </div>
 <br><br><br>
@@ -64,32 +70,31 @@
     &ensp;&ensp;
     <a style="text-decoration: none; color: #fff" href="regentidades.php"><button id="bnoconoce" type="button">Entidades</button></a>
     &ensp;&ensp;
-    <a style="text-decoration: none; color: #fff" href="regmunicipios.php"><button id="baviso" type="button">Municipios</button></a>
+    <a style="text-decoration: none; color: #fff" href="#"><button id="baviso" type="button">✔️Municipios✔️</button></a>
     &ensp;&ensp;
-    <a style="text-decoration: none; color: #fff" href="regusuarios.php"><button id="infodosis" type="button">✔️Usuarios✔️</button></a>
+    <a style="text-decoration: none; color: #fff" href="regusuarios.php"><button id="infodosis" type="button">Usuarios</button></a>
 
 </div>
 <br><br>
 
 <div style="text-align: center">
-    <h1>Usuario Actualizado</h1>
-        <table style="margin: 0 auto; text-align: center" border="1">
+    <form action="actualizarmuni.php" method="post" id="formmuni" name="muniform">
+        <table style="margin: 0 auto;" border="1">
             <thead>
             <th>ID</th>
-            <th>Usuario</th>
-            <th>Clave</th>
-            <th>Tipo Usuario</th>
+            <th>Municipio</th>
             </thead>
             <?php foreach ($rows as $row){ ?>
                 <tr>
-                    <td><?php echo ($row['id_usuario']) ?></td>
-                    <td><?php echo ($row['usuario']) ?> </td>
-                    <td><?php echo ($row['clave']) ?> </td>
-                    <td><?php echo ($row['tipousuario']) ?> </td>
+                    <td><?php echo ($row['id']) ?></td>
+                    <input hidden type="text" id="txtid" name="txtid" value="<?php echo ($row['id']) ?>">
+                    <td><input type="text" id="txtmuni" name="txtmuni" placeholder="<?php echo ($row['municipio']) ?>" /></td>
                 </tr>
             <?php } ?>
         </table>
-
+        <br>
+        <a style="text-decoration: none; color: #fff;" onclick="validaMunicipio()"><button id="busqespe" type="button">Actualizar</button></a>
+    </form>
 </div>
 <br><br>
 
