@@ -205,3 +205,7 @@ function AlertaBorrar(dato) {
         return false;
     }
 }
+
+function AlertaNoSePuede(dato) {
+    alert("No se pueden borrar "+dato+", solo editar.")
+}

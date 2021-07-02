@@ -77,7 +77,7 @@ $rows = $stmt->fetchAll();
                 <td>&ensp;<?php echo ($row['entidad']) ?>&ensp;</td>
                 <td>&ensp;<?php echo ($row['municipio']) ?>&ensp;</td>
                 <td>&ensp;<a href="#" style="text-decoration: none">Editar</a>&ensp;</td>
-                <td>&ensp;<a href="#" style="text-decoration: none">Borrar</a>&ensp;</td>
+                <td>&ensp;<a onclick="return AlertaNoSePuede('las entidades')" href="#" style="text-decoration: none">Borrar</a>&ensp;</td>
             </tr>
         <?php } ?>
     </table>

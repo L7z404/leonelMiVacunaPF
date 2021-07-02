@@ -80,7 +80,7 @@ $rows = $stmt->fetchAll();
                 <td>&ensp;<a onclick="return AlertaEditar(<?php echo $row['id'] ?>)"
                              href="editarmunicipios.php?id=<?php echo $row['id'] ?>"
                              style="text-decoration: none">Editar</a>&ensp;</td>
-                <td>&ensp;<a href="#" style="text-decoration: none">Borrar</a>&ensp;</td>
+                <td>&ensp;<a onclick="return AlertaNoSePuede('los municipios')" href="#" style="text-decoration: none">Borrar</a>&ensp;</td>
             </tr>
         <?php } ?>
     </table>
