@@ -21,7 +21,7 @@ if (empty($rows)) {
 } else {
     echo $resultado;
     foreach ($rows as $row) {
-        echo '<option value="' . $row['id'] . '">' . utf8_encode($row['municipio']) . '</option>';
+        echo '<option value="' . $row['id'] . '">' . ($row['municipio']) . '</option>';
     }
 }
 ?>
