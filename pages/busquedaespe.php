@@ -27,15 +27,18 @@ $rows = $stmt->fetchAll();
     <style>
         table{
             border: 5px #9E7E4F;
+            overflow-y:scroll;
+            height:fit-content;
+            display:block;
         }
         th{
             background-color: #BC955C;
-            font-size: 15px;
+            font-size: 20px;
             color: white;
         }
         td{
             background-color: #DFCBA7;
-            font-size: 13px;
+            font-size: 16px;
         }
     </style>
     <script language="JavaScript" type="text/javascript">

@@ -7,11 +7,20 @@
 
     require_once "conn_mysql_leonel.php";
 
-    $sql = 'SELECT d.id, d.nombre, d.apaterno, d.amaterno, d.curp, d.fecNac, d.sexo, d.postracion, d.diabetes, d.hipertension, d.cp, d.telefono, d.telefono2, d.email, d.emailap, d.dom_datos, d.folio, e.entidad, m.municipio FROM datos_persona d INNER JOIN entidades e ON d.id_entidad = e.id_entidad INNER JOIN municipios m ON d.id_municipio = m.id';
+    $id = $_GET['id'];
+    $id = (int)$id;
+
+    $sql = "SELECT d.id, d.nombre, d.apaterno, d.amaterno, d.curp, d.fecNac, d.sexo, d.postracion, 
+       d.diabetes, d.hipertension, d.cp, d.telefono, d.telefono2, d.email, d.emailap, d.dom_datos, 
+       d.folio, e.entidad, m.municipio FROM datos_persona d INNER JOIN entidades e ON d.id_entidad = e.id_entidad 
+           INNER JOIN municipios m ON d.id_municipio = m.id WHERE d.id='$id'";
     $stmt = $conn->query($sql);
     $rows = $stmt->fetchAll();
 
+    $sqlBorrar = "DELETE FROM datos_persona WHERE id='$id'";
+    $conn->exec($sqlBorrar);
 ?>
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -23,7 +32,7 @@
     <link rel="stylesheet" href="../css/vac_style.css" type="text/css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="../javascript/validaciones.js"></script>
-    <title>Registros Personas</title>
+    <title>Persona Borrada</title>
     <style>
         table{
             border: 5px #9E7E4F;
@@ -48,13 +57,13 @@
     <div id="centro_cabeza">
         <div id="imgDiv"></div>
     </div>
-    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Administración de Datos de Personas</div>
+    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Borrado de Datos de Personas</div>
     <div id="raya_baja_cabeza"></div>
 </div>
 <br><br><br>
 
 <div id="botones_abajo_index">
-    <a style="text-decoration: none; color: #fff" href="#"><button id="bregmivac" type="button">✔️Registros Personas✔️</button></a>
+    <a style="text-decoration: none; color: #fff" href="regpersonas.php"><button id="bregmivac" type="button">✔️Registros Personas✔️</button></a>
     &ensp;&ensp;
     <a style="text-decoration: none; color: #fff" href="regentidades.php"><button id="bnoconoce" type="button">Entidades</button></a>
     &ensp;&ensp;
@@ -64,31 +73,29 @@
 
 </div>
 <br><br>
-<div style="text-align: center"><a style="text-decoration: none; color: #fff;" href="busquedaespe.php"><button id="busqespe" type="button">Busqueda Especifica por Entidad y Municipios</button></a></div>
-<br>
+
 <div style="text-align: center">
+    <h1>Persona Borrada</h1>
     <table style="margin: 0 auto;" border="1">
         <thead>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Apellido 1</th>
-            <th>Apellido 2</th>
-            <th>CURP</th>
-            <th>Fecha Nac</th>
-            <th>Sexo</th>
-            <th>Postración</th>
-            <th>Diabetes</th>
-            <th>Hiptertension</th>
-            <th>Entidad de vacunación</th>
-            <th>Municipio de vacunación</th>
-            <th>CP</th>
-            <th>Telefono</th>
-            <th>Telefono 2</th>
-            <th>Correo</th>
-            <th>Correo Apoyo</th>
-            <th>Datos/Domicilio</th>
-            <th>-</th>
-            <th>-</th>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido 1</th>
+        <th>Apellido 2</th>
+        <th>CURP</th>
+        <th>Fecha Nac</th>
+        <th>Sexo</th>
+        <th>Postración</th>
+        <th>Diabetes</th>
+        <th>Hiptertension</th>
+        <th>Entidad de vacunación</th>
+        <th>Municipio de vacunación</th>
+        <th>CP</th>
+        <th>Telefono</th>
+        <th>Telefono 2</th>
+        <th>Correo</th>
+        <th>Correo Apoyo</th>
+        <th>Datos/Domicilio</th>
         </thead>
         <?php foreach ($rows as $row){ ?>
         <tr>
@@ -114,12 +121,6 @@
             <td><?php echo ($row['email']) ?></td>
             <td><?php echo ($row['emailap']) ?></td>
             <td><?php echo ($row['dom_datos']) ?></td>
-            <td>&ensp;<a onclick="return AlertaEditar(<?php echo $row['id'] ?>)"
-                         href="editarpersonas.php?id=<?php echo $row['id'] ?>"
-                         style="text-decoration: none">Editar</a>&ensp;</td>
-            <td>&ensp;<a onclick="return AlertaBorrar(<?php echo $row['id'] ?>)"
-                         href="borrarpersona.php?id=<?php echo $row['id'] ?>"
-                         style="text-decoration: none">Borrar</a>&ensp;</td>
         </tr>
         <?php } ?>
     </table>
@@ -140,3 +141,5 @@
 </footer>
 </body>
 </html>
+
+
