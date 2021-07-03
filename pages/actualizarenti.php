@@ -1,17 +1,25 @@
 <?php
-session_start();
-if ($_SESSION["validado"]!="true"){
-    header("Location: login.php");
-    exit;
-}
+    session_start();
+    if ($_SESSION["validado"]!="true"){
+        header("Location: login.php");
+        exit;
+    }
 
-require_once "conn_mysql_leonel.php";
+    require_once "conn_mysql_leonel.php";
 
-$sql = 'SELECT * FROM entidades';
-$stmt = $conn->query($sql);
-$rows = $stmt->fetchAll();
+    $id = $_POST['txtid'];
+    $id = (int)$id;
+    $enti = $_POST['txtenti'];
 
+
+    $sqlUpdate = "UPDATE entidades SET entidad = '$enti' WHERE id_entidad = '$id'";
+    $conn->exec($sqlUpdate);
+
+    $sql = "SELECT * FROM entidades WHERE id_entidad='$id'";
+    $stmt = $conn->query($sql);
+    $rows = $stmt->fetch();
 ?>
+
 <!doctype html>
 <html lang="es">
 <head>
@@ -23,19 +31,19 @@ $rows = $stmt->fetchAll();
     <link rel="stylesheet" href="../css/vac_style.css" type="text/css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="../javascript/validaciones.js"></script>
-    <title>Registros Entidades</title>
+    <title>Entidad Actualizado</title>
     <style>
         table{
             border: 5px #9E7E4F;
         }
         th{
             background-color: #BC955C;
-            font-size: 20px;
+            font-size: 25px;
             color: white;
         }
         td{
             background-color: #DFCBA7;
-            font-size: 16px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -45,7 +53,7 @@ $rows = $stmt->fetchAll();
     <div id="centro_cabeza">
         <div id="imgDiv"></div>
     </div>
-    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Administración de Datos de Entidades</div>
+    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Edición de Datos de Entidades</div>
     <div id="raya_baja_cabeza"></div>
 </div>
 <br><br><br>
@@ -53,7 +61,7 @@ $rows = $stmt->fetchAll();
 <div id="botones_abajo_index">
     <a style="text-decoration: none; color: #fff" href="regpersonas.php"><button id="bregmivac" type="button">Registros Personas</button></a>
     &ensp;&ensp;
-    <a style="text-decoration: none; color: #fff" href="#"><button id="bnoconoce" type="button">✔️Entidades✔️</button></a>
+    <a style="text-decoration: none; color: #fff" href="regentidades.php"><button id="bnoconoce" type="button">✔️Entidades✔️</button></a>
     &ensp;&ensp;
     <a style="text-decoration: none; color: #fff" href="regmunicipios.php"><button id="baviso" type="button">Municipios</button></a>
     &ensp;&ensp;
@@ -63,26 +71,22 @@ $rows = $stmt->fetchAll();
 <br><br>
 
 <div style="text-align: center">
-    <table style="margin: 0 auto;" border="1">
+    <h1>Entidad Actualizada</h1>
+    <table style="margin: 0 auto; text-align: center" border="1">
         <thead>
         <th>ID</th>
         <th>Entidad</th>
-        <th>-</th>
-        <th>-</th>
         </thead>
-        <?php foreach ($rows as $row){ ?>
             <tr>
-                <td>&ensp;<?php echo ($row['id_entidad']) ?>&ensp;</td>
-                <td>&ensp;<?php echo ($row['entidad']) ?>&ensp;</td>
-                <td>&ensp;<a onclick="return AlertaEditar(<?php echo $row['id_entidad'] ?>)"
-                             href="editarentidades.php?id=<?php echo $row['id_entidad'] ?>"
-                             style="text-decoration: none">Editar</a>&ensp;</td>
-                <td>&ensp;<a onclick="return AlertaNoSePuede('las entidades')" href="#" style="text-decoration: none">Borrar</a>&ensp;</td>
+                <td><?php echo ($rows['id_entidad']) ?></td>
+                <td><?php echo ($rows['entidad']) ?> </td>
             </tr>
-        <?php } ?>
     </table>
+
 </div>
-<br><br><br><br><br><br>
+<br><br>
+
+<br><br><br><br>
 <footer style="text-align: center">
 
     <button id="cerrars" type="button"><a style="text-decoration: none; color: #fff" href="login.php">Cerrar Sesión</a></button>
@@ -98,3 +102,4 @@ $rows = $stmt->fetchAll();
 </footer>
 </body>
 </html>
+

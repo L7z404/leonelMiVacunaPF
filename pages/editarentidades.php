@@ -1,15 +1,18 @@
 <?php
 session_start();
-if ($_SESSION["validado"]!="true"){
+if ($_SESSION["validado"] != "true") {
     header("Location: login.php");
     exit;
 }
 
 require_once "conn_mysql_leonel.php";
 
-$sql = 'SELECT * FROM entidades';
+$id = $_GET['id'];
+
+$sql = "SELECT e.id_entidad, e.id_municipio, e.entidad FROM entidades e 
+    INNER JOIN municipios m on e.id_municipio = m.id_municipio WHERE e.id_entidad='$id'";
 $stmt = $conn->query($sql);
-$rows = $stmt->fetchAll();
+$rows = $stmt->fetch();
 
 ?>
 <!doctype html>
@@ -23,7 +26,20 @@ $rows = $stmt->fetchAll();
     <link rel="stylesheet" href="../css/vac_style.css" type="text/css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="../javascript/validaciones.js"></script>
-    <title>Registros Entidades</title>
+    <title>Editar Entidades</title>
+    <script language="JavaScript" type="text/javascript">
+        function validaEntidad(){
+            var entidad = document.getElementById("txtenti").value;
+
+            if(entidad == null || entidad.length === 0 || /^\s+$/.test(entidad) || entidad.length > 55){
+                alert("Debes escribir una entidad válida.");
+                document.getElementById("txtenti").focus();
+                return false;
+            } else{
+                document.entiform.submit();
+            }
+        }
+    </script>
     <style>
         table{
             border: 5px #9E7E4F;
@@ -45,7 +61,7 @@ $rows = $stmt->fetchAll();
     <div id="centro_cabeza">
         <div id="imgDiv"></div>
     </div>
-    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Administración de Datos de Entidades</div>
+    <div id="pie_cabeza" style="color: white; text-align: center; padding: 0 0 10px 0; font-family: 'Comic Sans MS', serif; font-size: 30px">Edición de Datos de Entidades</div>
     <div id="raya_baja_cabeza"></div>
 </div>
 <br><br><br>
@@ -53,9 +69,9 @@ $rows = $stmt->fetchAll();
 <div id="botones_abajo_index">
     <a style="text-decoration: none; color: #fff" href="regpersonas.php"><button id="bregmivac" type="button">Registros Personas</button></a>
     &ensp;&ensp;
-    <a style="text-decoration: none; color: #fff" href="#"><button id="bnoconoce" type="button">✔️Entidades✔️</button></a>
+    <a style="text-decoration: none; color: #fff" href="regentidades.php"><button id="bnoconoce" type="button">✔️Entidades✔️</button></a>
     &ensp;&ensp;
-    <a style="text-decoration: none; color: #fff" href="regmunicipios.php"><button id="baviso" type="button">Municipios</button></a>
+    <a style="text-decoration: none; color: #fff" href="#"><button id="baviso" type="button">Municipios</button></a>
     &ensp;&ensp;
     <a style="text-decoration: none; color: #fff" href="regusuarios.php"><button id="infodosis" type="button">Usuarios</button></a>
 
@@ -63,26 +79,25 @@ $rows = $stmt->fetchAll();
 <br><br>
 
 <div style="text-align: center">
-    <table style="margin: 0 auto;" border="1">
-        <thead>
-        <th>ID</th>
-        <th>Entidad</th>
-        <th>-</th>
-        <th>-</th>
-        </thead>
-        <?php foreach ($rows as $row){ ?>
-            <tr>
-                <td>&ensp;<?php echo ($row['id_entidad']) ?>&ensp;</td>
-                <td>&ensp;<?php echo ($row['entidad']) ?>&ensp;</td>
-                <td>&ensp;<a onclick="return AlertaEditar(<?php echo $row['id_entidad'] ?>)"
-                             href="editarentidades.php?id=<?php echo $row['id_entidad'] ?>"
-                             style="text-decoration: none">Editar</a>&ensp;</td>
-                <td>&ensp;<a onclick="return AlertaNoSePuede('las entidades')" href="#" style="text-decoration: none">Borrar</a>&ensp;</td>
-            </tr>
-        <?php } ?>
-    </table>
+    <form action="actualizarenti.php" method="post" id="formenti" name="entiform">
+        <table style="margin: 0 auto;" border="1">
+            <thead>
+            <th>ID</th>
+            <th>Entidad</th>
+            </thead>
+                <tr>
+                    <td><?php echo ($rows['id_entidad']) ?></td>
+                    <input hidden type="text" id="txtid" name="txtid" value="<?php echo ($rows['id_entidad']) ?>">
+                    <td><input type="text" id="txtenti" name="txtenti" placeholder="<?php echo ($rows['entidad']) ?>" /></td>
+                </tr>
+        </table>
+        <br>
+        <a style="text-decoration: none; color: #fff;" onclick="validaEntidad()"><button id="busqespe" type="button">Actualizar</button></a>
+    </form>
 </div>
-<br><br><br><br><br><br>
+<br><br>
+
+<br><br><br><br>
 <footer style="text-align: center">
 
     <button id="cerrars" type="button"><a style="text-decoration: none; color: #fff" href="login.php">Cerrar Sesión</a></button>
@@ -98,3 +113,4 @@ $rows = $stmt->fetchAll();
 </footer>
 </body>
 </html>
+
