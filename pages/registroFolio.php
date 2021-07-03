@@ -95,9 +95,11 @@
             <br>
             <div id="datosPersonaCurp">
                 <p class="resultadoP">Ud. ha sido registrado exitosamente.</p>
-                <p class="resultadoP">Con el folio:<input type="text" id="txtfolio" name="txtfolio" style="width: 20%; background-color: #d4d3d3" value="<?php echo $folio ?>" /></p>
+                <p class="resultadoP">Con el folio:<input type="text" style="width: 20%; background-color: #d4d3d3" value="<?php echo $folio ?>" disabled /></p>
+                <input hidden type="text" id="txtfolio" name="txtfolio" style="width: 20%; background-color: #d4d3d3" value="<?php echo $folio ?>" />
                 <p class="resultadoP">Espere nuestra llamada donde le indicaremos su fecha y lugar de vacunacion</p>
-                <p class="resultadoP">CURP:<input type="text" id="txtCurp" name="txtCurp" style="width: 20%; background-color: #d4d3d3" value="<?php echo $infocurp ?>" /></p>
+                <p class="resultadoP">CURP:<input type="text" style="width: 20%; background-color: #d4d3d3" value="<?php echo $infocurp ?>" disabled /></p>
+                <input hidden type="text" id="txtCurp" name="txtCurp" style="width: 20%; background-color: #d4d3d3" value="<?php echo $infocurp ?>" />
 
                 <input hidden type="text" id="txtMunicipioNombre" name="txtMunicipioNombre" style="width: 20%; background-color: #d4d3d3" value="<?php foreach ($rows as $row){ echo $row['municipio']; } ?>" />
                 <input hidden type="text" id="txtEntidadNombre" name="txtEntidadNombre" style="width: 20%; background-color: #d4d3d3" value="<?php foreach ($rows7 as $rowe){ echo $rowe['entidad']; } ?>" />

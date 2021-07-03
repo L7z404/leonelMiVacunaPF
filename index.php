@@ -54,7 +54,7 @@
             <br />
             <br />
             <div id="curp_capcha_button">
-                <div id="captcha" class="g-recaptcha" data-sitekey="6LfNdjMbAAAAANzlt9qOKiIEqAWsDqhydrtUjDqg"></div>
+                <div id="captcha" class="g-recaptcha" data-sitekey="6Ldq_XIbAAAAAN-IGeIG_TizQ4VNtIdRg3sKRKc3"></div>
                 <button id="bconfcurp" type="button" onclick="return curpValidaSubmit();">Confirmar CURP</button>
             </div>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 29-06-2021 a las 21:16:01
+-- Tiempo de generación: 03-07-2021 a las 23:04:19
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.4.8
 
@@ -49,14 +49,6 @@ CREATE TABLE `datos_persona` (
   `folio` varchar(45) NOT NULL,
   `id_entidad_lugar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `datos_persona`
---
-
-INSERT INTO `datos_persona` (`id`, `nombre`, `apaterno`, `amaterno`, `curp`, `fecNac`, `id_entidad`, `sexo`, `postracion`, `diabetes`, `hipertension`, `id_municipio`, `cp`, `telefono`, `telefono2`, `email`, `emailap`, `dom_datos`, `folio`, `id_entidad_lugar`) VALUES
-(1, 'VENOM SNAKE', 'Castillo', 'Castañeda', 'CACL991014HNESSN05', '2021-06-16', 17, 'Hombre', 'Si', 'Si', 'Si', 41, 48640, '3751042118', '3751042118', 'leo@test.com', 'test@leo.com', 'asfd', 'f', 19),
-(2, 'NAOMI HUNTER', 'fasd', 'asdf', 'asdfa', '2021-06-16', 17, 'asdf', 'as', 'asdf', 'asfd', 41, 48640, '123', '123', 'leo@leo.com', 'leo@leo.com', 'asdf', 'f', 19);
 
 -- --------------------------------------------------------
 
@@ -127,22 +119,22 @@ CREATE TABLE `municipios` (
 INSERT INTO `municipios` (`id`, `id_municipio`, `municipio`) VALUES
 (1, 1, 'Asientos'),
 (2, 1, 'Calvillo'),
-(3, 1, 'Cosío'),
-(4, 1, 'Tepezalá'),
+(3, 1, 'CosÃ­o'),
+(4, 1, 'TepezalÃ¡'),
 (5, 1, 'El Llano'),
 (6, 2, 'Ensenada'),
 (7, 2, 'Mexicali'),
 (8, 2, 'Playas de Rosarito'),
 (9, 2, 'Tecate'),
 (10, 2, 'Tijuana'),
-(11, 3, 'Comundú'),
+(11, 3, 'ComundÃº'),
 (12, 3, 'La Paz'),
 (13, 3, 'Loreto'),
 (14, 3, 'Los Cabos'),
-(15, 3, 'Mulegé'),
+(15, 3, 'MulegÃ©'),
 (16, 4, 'Calakmul'),
-(17, 4, 'Escárcega'),
-(18, 4, 'Hecelchakán'),
+(17, 4, 'EscÃ¡rcega'),
+(18, 4, 'HecelchakÃ¡n'),
 (19, 4, 'Palizada'),
 (20, 4, 'Tenabo'),
 (21, 5, 'Ixtapa'),
@@ -150,43 +142,43 @@ INSERT INTO `municipios` (`id`, `id_municipio`, `municipio`) VALUES
 (23, 5, 'Bochil'),
 (24, 5, 'Ocosingo'),
 (25, 5, 'Escuintla'),
-(26, 6, 'Ascensión'),
+(26, 6, 'AscensiÃ³n'),
 (27, 6, 'Guachochi'),
-(28, 6, 'Jiménez'),
+(28, 6, 'JimÃ©nez'),
 (29, 6, 'Rosales'),
 (30, 6, 'Urique'),
-(31, 7, 'Cuatrociénegas'),
+(31, 7, 'CuatrociÃ©negas'),
 (32, 7, 'Escobedo'),
-(33, 7, 'Múzquiz'),
+(33, 7, 'MÃºzquiz'),
 (34, 7, 'Ocampo'),
 (35, 7, 'Viesca'),
-(36, 8, 'Armería'),
-(37, 8, 'Coquimatlán'),
-(38, 8, 'Ixtlahuacán'),
-(39, 8, 'Minatitlán'),
-(40, 8, 'Tecomán'),
+(36, 8, 'ArmerÃ­a'),
+(37, 8, 'CoquimatlÃ¡n'),
+(38, 8, 'IxtlahuacÃ¡n'),
+(39, 8, 'MinatitlÃ¡n'),
+(40, 8, 'TecomÃ¡n'),
 (41, 9, 'Azcapotzalco'),
 (42, 9, 'Iztacalco'),
 (43, 9, 'Milpa Alta'),
-(44, 9, 'Tláhuac'),
+(44, 9, 'TlÃ¡huac'),
 (45, 9, 'Xochimilco'),
-(46, 10, 'Canatlán'),
-(47, 10, 'Guanaceví'),
-(48, 10, 'Indé'),
+(46, 10, 'CanatlÃ¡n'),
+(47, 10, 'GuanacevÃ­'),
+(48, 10, 'IndÃ©'),
 (49, 10, 'Nazas'),
-(50, 10, 'Peñón Blanco'),
+(50, 10, 'PeÃ±Ã³n Blanco'),
 (51, 11, 'Comonfort'),
 (52, 11, 'Doctor Mora'),
-(53, 11, 'Huanímaro'),
+(53, 11, 'HuanÃ­maro'),
 (54, 11, 'Irapuato'),
-(55, 11, 'Jerécuaro'),
+(55, 11, 'JerÃ©cuaro'),
 (56, 12, 'Ahuacuotzingo	'),
 (57, 12, 'Alpoyeca'),
 (58, 12, 'Copala'),
 (59, 12, 'Igualapa'),
 (60, 12, 'Zitlala'),
 (61, 13, 'Chapantongo'),
-(62, 13, 'Eloxochitlán'),
+(62, 13, 'EloxochitlÃ¡n'),
 (63, 13, 'Huautla'),
 (64, 13, 'Pacula'),
 (65, 13, 'Tetepango'),
@@ -195,11 +187,11 @@ INSERT INTO `municipios` (`id`, `id_municipio`, `municipio`) VALUES
 (68, 14, 'Tecolotlan'),
 (69, 14, 'Ameca'),
 (70, 14, 'San Martin Hidalgo'),
-(71, 15, 'Álvaro Obregón'),
+(71, 15, 'Ãlvaro ObregÃ³n'),
 (72, 15, 'Azcapotzalco'),
-(73, 15, 'Benito Juárez'),
-(74, 15, 'Coyoacán'),
-(75, 15, 'Cuauhtémoc'),
+(73, 15, 'Benito JuÃ¡rez'),
+(74, 15, 'CoyoacÃ¡nâ€‚'),
+(75, 15, 'CuauhtÃ©moc'),
 (76, 16, 'Aporo'),
 (77, 16, 'Chavinda'),
 (78, 16, 'Ecuandureo'),
@@ -210,59 +202,59 @@ INSERT INTO `municipios` (`id`, `id_municipio`, `municipio`) VALUES
 (83, 17, 'Jiutepec'),
 (84, 17, 'Tlalnepantla'),
 (85, 17, 'Yecapixtla'),
-(86, 18, 'Amatlán de Cañas'),
-(87, 18, 'Bahía de Banderas'),
-(88, 18, 'Ixtlán del Río'),
+(86, 18, 'AmatlÃ¡n de CaÃ±as'),
+(87, 18, 'BahÃ­a de Banderas'),
+(88, 18, 'IxtlÃ¡n del RÃ­o'),
 (89, 18, 'Jala'),
 (90, 18, 'Xalisco'),
-(91, 19, 'Anáhuac'),
+(91, 19, 'AnÃ¡huac'),
 (92, 19, 'Cerralvo'),
-(93, 19, 'García'),
+(93, 19, 'GarcÃ­a'),
 (94, 19, 'Linares'),
 (95, 19, 'Vallecillo'),
 (96, 20, 'Abejones'),
 (97, 20, 'Cacalotepec'),
 (98, 20, 'Ixtaltepec'),
-(99, 20, 'Nochixtlán'),
-(100, 20, 'Ocotlán'),
+(99, 20, 'NochixtlÃ¡n'),
+(100, 20, 'OcotlÃ¡n'),
 (101, 21, 'Ahuazotepec'),
 (102, 21, 'Cuautlancingo'),
 (103, 21, 'Huejotzingo'),
 (104, 21, 'Molcaxac'),
-(105, 21, 'Zoquitlán'),
+(105, 21, 'ZoquitlÃ¡n'),
 (106, 22, 'Amealco de Bonfil'),
-(107, 22, 'Colón'),
+(107, 22, 'ColÃ³n'),
 (108, 22, 'Huimilpan'),
-(109, 22, 'Peñamiller'),
-(110, 22, 'San Joaquín'),
+(109, 22, 'PeÃ±amiller'),
+(110, 22, 'San JoaquÃ­n'),
 (111, 23, 'Bacalar'),
 (112, 23, 'Isla Mujeres'),
-(113, 23, 'Lázaro Cárdenas'),
+(113, 23, 'LÃ¡zaro CÃ¡rdenas'),
 (114, 23, 'Puerto Morelos'),
 (115, 23, 'Tulum'),
-(116, 24, 'Aquismón'),
+(116, 24, 'AquismÃ³n'),
 (117, 24, 'Tancanhuitz'),
 (118, 24, 'Lagunillas'),
 (119, 24, 'Salinas'),
 (120, 24, 'Vanegas'),
 (121, 25, 'Ahome'),
-(122, 25, 'Cosalá'),
+(122, 25, 'CosalÃ¡'),
 (123, 25, 'Choix'),
 (124, 25, 'Escuinapa'),
 (125, 25, 'Rosario'),
 (126, 26, 'Aconchi'),
-(127, 26, 'Bacadéhuachi'),
-(128, 26, 'Carbó'),
+(127, 26, 'BacadÃ©huachi'),
+(128, 26, 'CarbÃ³'),
 (129, 26, 'Etchojoa'),
-(130, 26, 'Yécora'),
-(131, 27, 'Balancán'),
+(130, 26, 'YÃ©cora'),
+(131, 27, 'BalancÃ¡n'),
 (132, 27, 'Huimanguillo'),
 (133, 27, 'Jalapa'),
 (134, 27, 'Macuspana'),
-(135, 27, 'Paraíso'),
+(135, 27, 'ParaÃ­so'),
 (136, 28, 'Altamira'),
 (137, 28, 'Burgos'),
-(138, 28, 'Güémez'),
+(138, 28, 'GÃ¼Ã©mez'),
 (139, 28, 'Miquihuana'),
 (140, 28, 'Tula'),
 (141, 29, 'Apizaco'),
@@ -274,17 +266,17 @@ INSERT INTO `municipios` (`id`, `id_municipio`, `municipio`) VALUES
 (147, 30, 'Tlaltetela'),
 (148, 30, 'Coatzacoalcos'),
 (149, 30, 'Coyutla'),
-(150, 30, 'Fortín'),
-(151, 31, 'Abalá'),
-(152, 31, 'Bokobá'),
+(150, 30, 'FortÃ­n'),
+(151, 31, 'AbalÃ¡'),
+(152, 31, 'BokobÃ¡'),
 (153, 31, 'Conkal'),
 (154, 31, 'Dzemul'),
-(155, 31, 'Kopomá'),
+(155, 31, 'KopomÃ¡'),
 (156, 32, 'Atolinga'),
 (157, 32, 'Fresnillo'),
-(158, 32, 'Pánuco'),
-(159, 32, 'Valparaíso'),
-(160, 32, 'Susticacán');
+(158, 32, 'PÃ¡nuco'),
+(159, 32, 'ValparaÃ­so'),
+(160, 32, 'SusticacÃ¡n');
 
 -- --------------------------------------------------------
 
@@ -304,8 +296,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `usuario`, `clave`, `tipousuario`) VALUES
-(1, 'l7z404', 12345, 1),
-(2, 'test', 54321, 1);
+(1, 'Admin', 112233, 1);
 
 --
 -- Índices para tablas volcadas
@@ -349,7 +340,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `datos_persona`
 --
 ALTER TABLE `datos_persona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `entidades`
@@ -367,7 +358,7 @@ ALTER TABLE `municipios`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
