@@ -128,7 +128,7 @@
 <br><br><br><br><br><br>
 <footer style="text-align: center">
 
-    <button id="cerrars" type="button"><a style="text-decoration: none; color: #fff" href="login.php">Cerrar Sesión</a></button>
+    <a style="text-decoration: none; color: #fff" href="login.php"><button id="cerrars" type="button">Cerrar Sesión</button></a>
     <br><br><br><br>
     <div id="raya_baja_footer">
         <p style="color: #fff; text-align: center; font-family: 'Comic Sans MS',serif">El horario de operación es continuo de lunes a domingo.</p>

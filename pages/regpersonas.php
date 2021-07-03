@@ -70,6 +70,7 @@
     <table style="margin: 0 auto;" border="1">
         <thead>
             <th>ID</th>
+            <th>Folio</th>
             <th>Nombre</th>
             <th>Apellido 1</th>
             <th>Apellido 2</th>
@@ -93,6 +94,7 @@
         <?php foreach ($rows as $row){ ?>
         <tr>
             <td><?php echo ($row['id']) ?></td>
+            <td><?php echo ($row['folio']) ?></td>
             <td><?php echo ($row['nombre']) ?></td>
             <td><?php echo ($row['apaterno']) ?></td>
             <td><?php echo ($row['amaterno']) ?></td>
@@ -127,7 +129,7 @@
 <br><br><br><br><br><br>
 <footer style="text-align: center">
 
-    <button id="cerrars" type="button"><a style="text-decoration: none; color: #fff" href="login.php">Cerrar Sesión</a></button>
+    <a style="text-decoration: none; color: #fff" href="login.php"><button id="cerrars" type="button">Cerrar Sesión</button></a>
     <br><br><br><br>
     <div id="raya_baja_footer">
         <p style="color: #fff; text-align: center; font-family: 'Comic Sans MS',serif">El horario de operación es continuo de lunes a domingo.</p>
